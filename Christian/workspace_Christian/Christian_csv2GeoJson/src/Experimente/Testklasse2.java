@@ -18,6 +18,8 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class Testklasse2 {
 	
 	public static void main(String[] args) throws Exception {
@@ -37,6 +39,7 @@ public class Testklasse2 {
 			String line = "";
 			while ((line = buffR.readLine()) != null) {
 				sBuff.append(line + "\n");
+				List stadien
 			}
 			EntityUtils.consume(entity1);
 		
@@ -44,6 +47,12 @@ public class Testklasse2 {
 			response1.close();
 		}
 		System.out.println(sBuff.toString());
+		
+		sBuff.s
+		
+		
+		ObjectMapper mapper = new ObjectMapper();
+		//String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(student);
 
 	}
 
