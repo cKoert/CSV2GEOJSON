@@ -25,6 +25,11 @@ Test Seba
 
 Hallo zusammen!
 
+<<<<<<< HEAD
 Thomas du altes Haus. Na wie gehts dir?
 
 Gut, der Dion sitzt neben mir :D
+=======
+Thomas du altes Haus. Na wie gehts dir? 
+
+>>>>>>> cc3a6cd4f1ef547732baf54b641b0cc38cd673b4
