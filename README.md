@@ -25,4 +25,6 @@ Test Seba
 
 Hallo zusammen!
 
-Thomas du altes Haus. Na wie gehts dir? 
+Thomas du altes Haus. Na wie gehts dir?
+
+Gut, der Dion sitzt neben mir :D
