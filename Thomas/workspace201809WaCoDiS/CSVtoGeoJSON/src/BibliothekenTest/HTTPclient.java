@@ -45,10 +45,6 @@ public class HTTPclient {
 		
 		System.out.println(buffer1);
 		
-		
-
-
-		
 
 	}
 
