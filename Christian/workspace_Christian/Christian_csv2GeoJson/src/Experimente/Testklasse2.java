@@ -39,17 +39,7 @@ public class Testklasse2 {
 				sBuff.append(line + "\n");
 			}
 			EntityUtils.consume(entity1);
-			System.out.println();
-			HttpEntity entity2 = response1.getEntity();
-			InputStream httpcontent2 = entity1.getContent();
-			InputStreamReader inStream2 = new InputStreamReader(httpcontent1);
-			BufferedReader buffR2 = new BufferedReader(inStream2);
-			StringBuffer sBuff2 = new StringBuffer();
-			String line2 = "";
-			while ((line2 = buffR.readLine()) != null) {
-				sBuff2.append(line2 + "\n");
-			}
-			
+		
 		} finally {
 			response1.close();
 		}
