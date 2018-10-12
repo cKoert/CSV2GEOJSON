@@ -1,3 +1,17 @@
 INDEX VERSION 1.131+C:\Users\Atachon\Documents\GitHub\CSV2GEOJSON\Thomas\workspace201809WaCoDiS\.metadata\.plugins\org.eclipse.jdt.core
+3294818235.index
+3477454888.index
+2473117433.index
+332383186.index
+17849278.index
+4076052336.index
+2516736234.index
+3363043619.index
+3339526777.index
+3555159178.index
+2672341986.index
 3996102163.index
+2266003547.index
 2487935619.index
+562921308.index
+660005446.index
