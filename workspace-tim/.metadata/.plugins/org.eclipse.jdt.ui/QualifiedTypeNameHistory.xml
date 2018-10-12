@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.http.impl.client.CloseableHttpClient"/>
+<fullyQualifiedTypeName name="org.apache.http.client.methods.HttpGet"/>
+<fullyQualifiedTypeName name="org.apache.http.client.methods.CloseableHttpResponse"/>
+<fullyQualifiedTypeName name="org.apache.http.impl.client.HttpClients"/>
+<fullyQualifiedTypeName name="org.apache.http.client.fluent.Form"/>
+<fullyQualifiedTypeName name="org.apache.http.client.fluent.Request"/>
+<fullyQualifiedTypeName name="org.apache.http.client.fluent.Content"/>
+<fullyQualifiedTypeName name="javax.sound.midi.Synthesizer"/>
+<fullyQualifiedTypeName name="org.apache.http.NameValuePair"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.apache.http.entity.BufferedHttpEntity"/>
+</qualifiedTypeNameHistroy>
