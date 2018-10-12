@@ -1,0 +1,3 @@
+INDEX VERSION 1.130+C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\org.eclipse.jdt.core
+1374451029.index
+304290290.index
