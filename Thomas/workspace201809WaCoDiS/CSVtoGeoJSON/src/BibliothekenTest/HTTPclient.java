@@ -17,35 +17,47 @@ public class HTTPclient {
 		
 		CloseableHttpClient httpclient = HttpClients.createDefault();
 		HttpGet httpGet = new HttpGet("https://raw.githubusercontent.com/jokecamp/FootballData/master/other/stadiums-with-GPS-coordinates.csv");
-		CloseableHttpResponse response1 = httpclient.execute(httpGet);
+		CloseableHttpResponse antwort = httpclient.execute(httpGet);
 		
 		//Fehler bei Website aufrufen
 		
-		StringBuffer buffer1 = new StringBuffer("");
+		StringBuffer csvString = new StringBuffer("");
 		
 		try {
-			HttpEntity entity1 = response1.getEntity();
-			InputStream content1 = entity1.getContent();
-			BufferedReader rd = new BufferedReader(new InputStreamReader(content1));
+			HttpEntity entity = antwort.getEntity();
+			InputStream content = entity.getContent();
+			BufferedReader rd = new BufferedReader(new InputStreamReader(content));
 
 			String line = "";
 			while ((line = rd.readLine()) != null) {
-				buffer1.append(line + "\n");
+				csvString.append(line + "\n");
 			}
 			
-		    /*
-			System.out.println(response1.getStatusLine());
-		    HttpEntity entity1 = response1.getEntity();
-		    */
-			
-			EntityUtils.consume(entity1);
+			//EntityUtils.consume(entity1);
 		} finally {
-		    response1.close();
+		    antwort.close();
 		}
 		
-		System.out.println(buffer1);
+		System.out.println(csvString);
+		
 		
 
 	}
+}
 
+class jackObj {
+	private float lat;
+	private float lon;
+	private String eins;
+    private String zwei;
+    private String drei;
+    private String vier;
+    private String funf;
+    private String sechs;
+    private String sieben;
+    public jackObj(){}
+	   
+    //public String toString(){
+    //   return "Student [ name: "+name+", age: "+ age+ " ]";
+    //}
 }
