@@ -1,21 +1,23 @@
 package Experimente;
 
-public abstract class Stadion {
+public class Stadion {
 	private String team;
 	private String fDCOUK;
 	private String city;
-	private int Capacity;
-	private double latitude;
-	private double longitude;
+	private String stadium;
+	private String capacity;
+	private String latitude;
+	private String longitude;
 	private String country;
 	
-	public Stadion(String team, String fDCOUK, String city, int capacity, double latitude, double longitude,
-			String country) {
+	public Stadion(String team, String fDCOUK, String city, String stadium, String capacity, String latitude,
+			String longitude, String country) {
 		super();
 		this.team = team;
 		this.fDCOUK = fDCOUK;
 		this.city = city;
-		Capacity = capacity;
+		this.stadium = stadium;
+		this.capacity = capacity;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.country = country;
@@ -45,27 +47,35 @@ public abstract class Stadion {
 		this.city = city;
 	}
 
-	public int getCapacity() {
-		return Capacity;
+	public String getStadium() {
+		return stadium;
 	}
 
-	public void setCapacity(int capacity) {
-		Capacity = capacity;
+	public void setStadium(String stadium) {
+		this.stadium = stadium;
 	}
 
-	public double getLatitude() {
+	public String getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(String capacity) {
+		this.capacity = capacity;
+	}
+
+	public String getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(double latitude) {
+	public void setLatitude(String latitude) {
 		this.latitude = latitude;
 	}
 
-	public double getLongitude() {
+	public String getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(double longitude) {
+	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
 
@@ -79,5 +89,5 @@ public abstract class Stadion {
 	
 	
 	
-
+	
 }

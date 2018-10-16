@@ -18,6 +18,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
+import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Testklasse2 {
@@ -28,7 +29,11 @@ public class Testklasse2 {
 		HttpGet httpGet = new HttpGet("https://raw.githubusercontent.com/jokecamp/FootballData/master/other/stadiums-with-GPS-coordinates.csv");
 		CloseableHttpResponse response1 = httpclient.execute(httpGet); //wirft excepion aus , führt httpget aus
 		BufferedReader buffR;
-		StringBuffer sBuff = new StringBuffer();
+		//StringBuffer sBuff = new StringBuffer();
+		
+		String jsonString = "";
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.registerModule(new JtsModule());
 
 		try {
 			HttpEntity entity1 = response1.getEntity();	//ein HttpObjekt wird erzeugt,bzw gefüllt (Statusleiste, Parameter, Content)
@@ -36,24 +41,32 @@ public class Testklasse2 {
 			InputStreamReader inStream = new InputStreamReader(httpcontent1); //Inhalt wird gelesen
 			buffR = new BufferedReader(inStream);
 			
+			
 			String line = "";
 			while ((line = buffR.readLine()) != null) {
-				sBuff.append(line + "\n");
-				List stadien
+				String[] stadAr = line.split(",");
+				//sBuff.append(line + "\n");
+				
+				//Stadion stadion = new Stadion("Team" , "FDCOUK" ,"City", "Stadium" ,"6666","1000.0","1000.0","Country");
+				
+				Stadion stadion = new Stadion(stadAr[0], stadAr[1], stadAr[2], stadAr[3], stadAr[4], stadAr[5], stadAr[6], stadAr[7]);
+				jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stadion);	//nutzt getter-Methoden
+				//byte[] jsonByte = mapper.writeValueAsBytes(stadion);
+				//System.out.println(jsonByte);
+				
+				
+				
+				System.out.println(jsonString);
+				
 			}
 			EntityUtils.consume(entity1);
+			
 		
 		} finally {
 			response1.close();
 		}
-		System.out.println(sBuff.toString());
+	
 		
-		sBuff.s
-		
-		
-		ObjectMapper mapper = new ObjectMapper();
-		//String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(student);
-
 	}
 
 }
