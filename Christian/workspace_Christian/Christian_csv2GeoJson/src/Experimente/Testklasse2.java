@@ -1,6 +1,9 @@
 package Experimente;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -21,19 +24,47 @@ import org.apache.http.util.EntityUtils;
 import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.Properties;
+
 public class Testklasse2 {
 	
 	public static void main(String[] args) throws Exception {
 
-		CloseableHttpClient httpclient = HttpClients.createDefault();
-		HttpGet httpGet = new HttpGet("https://raw.githubusercontent.com/jokecamp/FootballData/master/other/stadiums-with-GPS-coordinates.csv");
-		CloseableHttpResponse response1 = httpclient.execute(httpGet); //wirft excepion aus , führt httpget aus
-		BufferedReader buffR;
-		//StringBuffer sBuff = new StringBuffer();
+		//Properties Datei
+		Properties properties = new Properties();
+		BufferedInputStream stream = new BufferedInputStream(new FileInputStream("C:\\Users\\chris\\OneDrive for Business\\SHK_Stelle\\CSV2GEOJSON\\stadien.properties"));
 		
+		try {
+		properties.load(stream);
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+		
+		stream.close();
+		String url = properties.getProperty("url");
+		String fieldSep = properties.getProperty("fieldSep");
+		String xField = properties.getProperty("xField");
+		String yField = properties.getProperty("yField");
+		String ort = properties.getProperty("ort");
+		
+		//HTTP einlesen
+		CloseableHttpClient httpclient = HttpClients.createDefault();
+		HttpGet httpGet = new HttpGet(url);
+		CloseableHttpResponse response1 = httpclient.execute(httpGet); //wirft excepion aus , führt httpget aus
+		
+		//CSV lesen
+		BufferedReader buffR;
+		
+		
+		List stadien = new ArrayList<Stadion>();
+		
+		//Json erstellen
 		String jsonString = "";
 		ObjectMapper mapper = new ObjectMapper();
-		mapper.registerModule(new JtsModule());
+		
+		
+
 
 		try {
 			HttpEntity entity1 = response1.getEntity();	//ein HttpObjekt wird erzeugt,bzw gefüllt (Statusleiste, Parameter, Content)
@@ -41,22 +72,29 @@ public class Testklasse2 {
 			InputStreamReader inStream = new InputStreamReader(httpcontent1); //Inhalt wird gelesen
 			buffR = new BufferedReader(inStream);
 			
-			
+			boolean ersteZeile = true;	
 			String line = "";
+			String[] feldNamen;
+			
 			while ((line = buffR.readLine()) != null) {
-				String[] stadAr = line.split(",");
-				//sBuff.append(line + "\n");
+				String[] stadAr = line.split(fieldSep);
+				if(ersteZeile == true) {
+					feldNamen = stadAr;
+					ersteZeile = false;
+				}
+				else {
+					Stadion stadion = new Stadion(stadAr[0], stadAr[1], stadAr[2], stadAr[3], stadAr[4], stadAr[5], stadAr[6], stadAr[7]);
+					stadien.add(stadion);
+					jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stadion);	//nutzt getter-Methoden
 				
-				//Stadion stadion = new Stadion("Team" , "FDCOUK" ,"City", "Stadium" ,"6666","1000.0","1000.0","Country");
+				}
 				
-				Stadion stadion = new Stadion(stadAr[0], stadAr[1], stadAr[2], stadAr[3], stadAr[4], stadAr[5], stadAr[6], stadAr[7]);
-				jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stadion);	//nutzt getter-Methoden
 				//byte[] jsonByte = mapper.writeValueAsBytes(stadion);
 				//System.out.println(jsonByte);
 				
 				
 				
-				System.out.println(jsonString);
+				//System.out.println(jsonString);
 				
 			}
 			EntityUtils.consume(entity1);

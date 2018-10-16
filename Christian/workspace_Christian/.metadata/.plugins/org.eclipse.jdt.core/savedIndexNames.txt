@@ -13,7 +13,6 @@ INDEX VERSION 1.130+C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\
 3523662158.index
 4184067879.index
 4257325822.index
-459470480.index
 2773834657.index
 4084874180.index
 3854475047.index
@@ -22,8 +21,8 @@ INDEX VERSION 1.130+C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\
 1269565172.index
 4037281789.index
 326805980.index
-1084624933.index
 2301944148.index
+1084624933.index
 1518219961.index
 304290290.index
 4289135590.index
