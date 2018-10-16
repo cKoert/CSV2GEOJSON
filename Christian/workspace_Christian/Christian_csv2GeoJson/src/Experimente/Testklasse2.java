@@ -26,20 +26,23 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Properties;
 
+
+
 public class Testklasse2 {
-
+	
+	
 	public static void main(String[] args) throws Exception {
-
 		// Properties Datei lesen
 		Properties properties = new Properties();
+		try {
 		BufferedInputStream stream = new BufferedInputStream(new FileInputStream(
 				"C:\\Users\\chris\\OneDrive for Business\\SHK_Stelle\\CSV2GEOJSON\\stadien.properties"));
-		try {
 			properties.load(stream);
+			stream.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		stream.close();
+		
 		String url = properties.getProperty("url");
 		String fieldSep = properties.getProperty("fieldSep");
 		String xField = properties.getProperty("xField");
@@ -57,7 +60,7 @@ public class Testklasse2 {
 
 		// Json erstellen
 		String jsonString = "";
-		ObjectMapper mapper = new ObjectMapper();
+		ObjectMapper mapper = new ObjectMapper();	//"Vorgabe" der JacksonBib
 
 		try {
 			// Http Objekt anlegen
@@ -66,13 +69,11 @@ public class Testklasse2 {
 			InputStreamReader inStream = new InputStreamReader(httpcontent1); // Inhalt wird gelesen
 			buffR = new BufferedReader(inStream);
 			
-			
-			
 			// Damit Schleife funktioniert
-			String line = "";
-			// Erste Zeile filtern
-			String[] feldNamen;
-			boolean ersteZeile = true;
+			String line = "";	//Leerer Startwert
+			// Erste Zeile filtern	
+			String[] feldNamen;			//Spaltenüberschriften
+			boolean ersteZeile = true;	
 
 			while ((line = buffR.readLine()) != null) {
 				String[] stadAr = line.split(fieldSep);
@@ -83,14 +84,14 @@ public class Testklasse2 {
 					Stadion stadion = new Stadion(stadAr[0], stadAr[1], stadAr[2], stadAr[3], stadAr[4], stadAr[5],
 							stadAr[6], stadAr[7]);
 					//stadien.add(stadion);
-					jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stadion); // nutzt
-																										// getter-Methoden
+					jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stadion); // nutzt getter-Methoden
 				}
 				// byte[] jsonByte = mapper.writeValueAsBytes(stadion);
 				// System.out.println(jsonByte);
-				System.out.println(jsonString);
+				System.out.println(jsonString);	
+				
 			}
-			EntityUtils.consume(entity1);
+			//EntityUtils.consume(entity1);
 		} finally {
 			response1.close();
 		}
