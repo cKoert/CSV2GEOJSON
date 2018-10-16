@@ -23,6 +23,13 @@ public class Stadion {
 		this.country = country;
 	}
 
+	@Override
+	public String toString() {
+		return "Stadion [team=" + team + ", fDCOUK=" + fDCOUK + ", city=" + city + ", stadium=" + stadium
+				+ ", capacity=" + capacity + ", latitude=" + latitude + ", longitude=" + longitude + ", country="
+				+ country + "]";
+	}
+
 	public String getTeam() {
 		return team;
 	}

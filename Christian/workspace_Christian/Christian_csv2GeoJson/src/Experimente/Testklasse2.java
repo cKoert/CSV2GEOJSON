@@ -27,84 +27,75 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Properties;
 
 public class Testklasse2 {
-	
+
 	public static void main(String[] args) throws Exception {
 
-		//Properties Datei
+		// Properties Datei lesen
 		Properties properties = new Properties();
-		BufferedInputStream stream = new BufferedInputStream(new FileInputStream("C:\\Users\\chris\\OneDrive for Business\\SHK_Stelle\\CSV2GEOJSON\\stadien.properties"));
-		
+		BufferedInputStream stream = new BufferedInputStream(new FileInputStream(
+				"C:\\Users\\chris\\OneDrive for Business\\SHK_Stelle\\CSV2GEOJSON\\stadien.properties"));
 		try {
-		properties.load(stream);
-		}
-		catch(IOException e){
+			properties.load(stream);
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 		stream.close();
 		String url = properties.getProperty("url");
 		String fieldSep = properties.getProperty("fieldSep");
 		String xField = properties.getProperty("xField");
 		String yField = properties.getProperty("yField");
 		String ort = properties.getProperty("ort");
-		
-		//HTTP einlesen
+
+		// HTTP kontaktieren
 		CloseableHttpClient httpclient = HttpClients.createDefault();
 		HttpGet httpGet = new HttpGet(url);
-		CloseableHttpResponse response1 = httpclient.execute(httpGet); //wirft excepion aus , führt httpget aus
-		
-		//CSV lesen
+		CloseableHttpResponse response1 = httpclient.execute(httpGet); // wirft excepion aus , führt httpget aus
+
+		// CSV lesen
 		BufferedReader buffR;
-		
-		
-		List stadien = new ArrayList<Stadion>();
-		
-		//Json erstellen
+		//List stadien = new ArrayList<Stadion>();
+
+		// Json erstellen
 		String jsonString = "";
 		ObjectMapper mapper = new ObjectMapper();
-		
-		
-
 
 		try {
-			HttpEntity entity1 = response1.getEntity();	//ein HttpObjekt wird erzeugt,bzw gefüllt (Statusleiste, Parameter, Content)
-			InputStream httpcontent1 = entity1.getContent(); //Inhalt abfragen
-			InputStreamReader inStream = new InputStreamReader(httpcontent1); //Inhalt wird gelesen
+			// Http Objekt anlegen
+			HttpEntity entity1 = response1.getEntity(); // ein HttpObjekt wird erzeugt,bzw gefüllt (Statusleiste,											// Parameter, Content)
+			InputStream httpcontent1 = entity1.getContent(); // Inhalt abfragen
+			InputStreamReader inStream = new InputStreamReader(httpcontent1); // Inhalt wird gelesen
 			buffR = new BufferedReader(inStream);
 			
-			boolean ersteZeile = true;	
-			String line = "";
-			String[] feldNamen;
 			
+			
+			// Damit Schleife funktioniert
+			String line = "";
+			// Erste Zeile filtern
+			String[] feldNamen;
+			boolean ersteZeile = true;
+
 			while ((line = buffR.readLine()) != null) {
 				String[] stadAr = line.split(fieldSep);
-				if(ersteZeile == true) {
+				if (ersteZeile == true) {
 					feldNamen = stadAr;
 					ersteZeile = false;
+				} else {
+					Stadion stadion = new Stadion(stadAr[0], stadAr[1], stadAr[2], stadAr[3], stadAr[4], stadAr[5],
+							stadAr[6], stadAr[7]);
+					//stadien.add(stadion);
+					jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stadion); // nutzt
+																										// getter-Methoden
 				}
-				else {
-					Stadion stadion = new Stadion(stadAr[0], stadAr[1], stadAr[2], stadAr[3], stadAr[4], stadAr[5], stadAr[6], stadAr[7]);
-					stadien.add(stadion);
-					jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stadion);	//nutzt getter-Methoden
-				
-				}
-				
-				//byte[] jsonByte = mapper.writeValueAsBytes(stadion);
-				//System.out.println(jsonByte);
-				
-				
-				
-				//System.out.println(jsonString);
-				
+				// byte[] jsonByte = mapper.writeValueAsBytes(stadion);
+				// System.out.println(jsonByte);
+				System.out.println(jsonString);
 			}
 			EntityUtils.consume(entity1);
-			
-		
 		} finally {
 			response1.close();
 		}
-	
-		
+
+		//System.out.println(stadien.toString());
 	}
 
 }
