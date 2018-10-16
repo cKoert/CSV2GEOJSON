@@ -1,11 +1,14 @@
 package BibliothekenTest;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -19,19 +22,37 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class StadionTest {
 
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws Exception {
+
+		// Properties Datei
+		Properties properties = new Properties();
+		BufferedInputStream stream = new BufferedInputStream(new FileInputStream("C:\\Users\\Atachon\\Documents\\GitHub\\CSV2GEOJSON\\stadien.properties"));
+
+		try {
+			properties.load(stream);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		stream.close();
+		String url = properties.getProperty("url");
+		String fieldSep = properties.getProperty("fieldSep");
+		String xField = properties.getProperty("xField");
+		String yField = properties.getProperty("yField");
+		String ort = properties.getProperty("ort");
 		
+		
+		//HTTP-Client Aufruf der CSV Datei
 		CloseableHttpClient httpclient = HttpClients.createDefault();
-		HttpGet httpGet = new HttpGet("https://raw.githubusercontent.com/jokecamp/FootballData/master/other/stadiums-with-GPS-coordinates.csv");
+		HttpGet httpGet = new HttpGet(url);
 		CloseableHttpResponse antwort = httpclient.execute(httpGet);
-		
-		//Fehler bei Website aufrufen
-		
-		//StringBuffer csvString = new StringBuffer("");
-		String csvString = "";
+
+		// Fehler bei Website aufrufen
+
+		// StringBuffer csvString = new StringBuffer("");
+		String[] firstLineArray;
 		String[] csvArray;
 		List<Stadion> csvList = new ArrayList<Stadion>();
-		
+
 		try {
 			HttpEntity entity = antwort.getEntity();
 			InputStream content = entity.getContent();
@@ -40,40 +61,42 @@ public class StadionTest {
 			String line = "";
 			Boolean firstLine = true;
 			while ((line = rd.readLine()) != null) {
-				//csvString = csvString + line + "\n";
-				csvString = line;
+				// csvString = csvString + line + "\n";
 				csvArray = line.split(",");
-				//System.out.println(csvArray);
-				if(firstLine == false) {
-					Stadion stad = new Stadion(csvArray[0], csvArray[1], csvArray[2], csvArray[3], csvArray[4], csvArray[5], csvArray[6], csvArray[7]);
+				// System.out.println(csvArray);
+				if (firstLine == false) {
+					Stadion stad = new Stadion(csvArray[0], csvArray[1], csvArray[2], csvArray[3], csvArray[4],
+							csvArray[5], csvArray[6], csvArray[7]);
 					csvList.add(stad);
-				}else {
+				} else {
+					firstLineArray = csvArray;
 					firstLine = false;
 				}
 			}
-			//EntityUtils.consume(entity1);
+			// EntityUtils.consume(entity1);
 		} finally {
-		    antwort.close();
+			antwort.close();
 		}
-		
-		//System.out.println(csvString);
-		
-		
-		//Aufbereitung des CSV-Strings
-		
-		//Stadion a = new Stadion("FC-Tim", "FC-Tim", "Iserlohn", "Kuro-Stadion", "2", "51.376128f", "7.674340f", "Deutschland");
+
+		// Aufbereitung des CSV-Strings
+
+		// Stadion a = new Stadion("FC-Tim", "FC-Tim", "Iserlohn", "Kuro-Stadion", "2",
+		// "51.376128f", "7.674340f", "Deutschland");
 		String jsonString = "";
-		
+
 		ObjectMapper mapper = new ObjectMapper();
-		try{
-			for(int i = 0; i <= csvList.size() - 1; i++) {
+		try {
+			for (int i = 0; i <= csvList.size() - 1; i++) {
 				jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(csvList.get(i));
 				System.out.println(jsonString);
 			}
+		} catch (JsonParseException e) {
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		catch (JsonParseException e) { e.printStackTrace();}
-		catch (JsonMappingException e) { e.printStackTrace(); }
-		catch (IOException e) { e.printStackTrace();}
 
 	}
 }
