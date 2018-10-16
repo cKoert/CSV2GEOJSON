@@ -5,6 +5,7 @@ Java Version 1.8
 readme
 
 Beispiel GeoJSON mit Jackson:
+https://me4bruno.wordpress.com/2012/04/07/geojson-erzeugen-mit-java/
 ################
 public class JacksonJsonService implements JsonService {
  
