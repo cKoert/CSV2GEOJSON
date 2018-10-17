@@ -31,7 +31,13 @@ import java.util.Properties;
 public class Testklasse2 {
 	
 	
+	
+	
+	
+	
 	public static void main(String[] args) throws Exception {
+		
+		
 		// Properties Datei lesen
 		Properties properties = new Properties();
 		try {
@@ -81,7 +87,7 @@ public class Testklasse2 {
 					feldNamen = stadAr;
 					ersteZeile = false;
 				} else {
-					Stadion stadion = new Stadion(stadAr[0], stadAr[1], stadAr[2], stadAr[3], stadAr[4], stadAr[5],
+					StadionExp stadion = new StadionExp(stadAr[0], stadAr[1], stadAr[2], stadAr[3], stadAr[4], stadAr[5],
 							stadAr[6], stadAr[7]);
 					//stadien.add(stadion);
 					jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stadion); // nutzt getter-Methoden
