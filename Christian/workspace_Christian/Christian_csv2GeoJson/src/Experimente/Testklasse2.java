@@ -131,23 +131,6 @@ public class Testklasse2 {
 		
 		System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(collectionNode));
 		System.out.println();
-		
-		/*
-		ArrayNode CollectionArray = mapper.createArrayNode();
-		ObjectNode author1 = mapper.createObjectNode();
-        author1.put("type","FeatureCollection");
-        author1.put("features","");
-        
-        ObjectNode objectNode1 = mapper.createObjectNode();
-        objectNode1.put("type", "Feature");
-        objectNode1.put("properties", "");
-        objectNode1.put("geometry", "");
-        
-        CollectionArray.add(author1);
-        CollectionArray.add(objectNode1);
-        
-        System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(CollectionArray));
-        */
 		//System.out.println(stadien.toString());
 	}
 

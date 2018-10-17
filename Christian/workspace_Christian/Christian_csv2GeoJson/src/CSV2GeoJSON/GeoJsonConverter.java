@@ -20,6 +20,8 @@ import org.apache.http.impl.client.HttpClients;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 
 public class GeoJsonConverter {
@@ -103,15 +105,40 @@ public class GeoJsonConverter {
 
 	// Umwandlung in GeoJSON
 	public String createGEOJSON(ArrayList<Stadion> stadien1) throws Exception {
-		
 		try {
 			String jsonString = "";
 			ArrayList<Stadion> stadien = stadien1;
 			ObjectMapper mapper = new ObjectMapper();
+			
+			ObjectNode collectionNode = mapper.createObjectNode();
+			ArrayNode features = mapper.createArrayNode();
+			
 			for (int i = 0; i < stadien.size(); i++) {
 				jsonString = jsonString + mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stadien.get(i));
+				
+				//GEOJson anlegen
+				ObjectNode feature1 = mapper.createObjectNode();
+				ObjectNode properties1 = mapper.createObjectNode();
+				ObjectNode geometry = mapper.createObjectNode();
+				
+				feature1.put("type", "Feature");
+				//geometry anlegen
+				Double[] coord = new Double[2];
+				coord[0] = Double.parseDouble(stadien.get(i).getLongitude());
+				coord[1] = Double.parseDouble(stadien.get(i).getLatitude());
+				geometry.put("type", "Point");
+				geometry.putPOJO("coordinates", coord);
+				
+				//properties anlegen
+		        feature1.putPOJO("properties", jsonString);
+		        feature1.putPOJO("geometry", geometry);
+		        
+		        features.add(feature1);
 			}
-		return jsonString;
+		collectionNode.put("type","FeatureCollection");
+		collectionNode.putPOJO("features", features);
+		//System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(collectionNode));
+		return "Ende";
 		} catch (JsonProcessingException e) {
 			throw e;
 		}
