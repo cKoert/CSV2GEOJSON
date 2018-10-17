@@ -4,4 +4,12 @@
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.apache.http.client.ClientProtocolException"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.core.JsonProcessingException"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.JsonNodeFactory"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ObjectNode"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ArrayNode"/>
 </qualifiedTypeNameHistroy>
