@@ -23,6 +23,9 @@ import org.apache.http.util.EntityUtils;
 
 import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.JsonNodeFactory;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.util.Properties;
 
@@ -67,7 +70,8 @@ public class Testklasse2 {
 		// Json erstellen
 		String jsonString = "";
 		ObjectMapper mapper = new ObjectMapper();	//"Vorgabe" der JacksonBib
-
+		
+		
 		try {
 			// Http Objekt anlegen
 			HttpEntity entity1 = response1.getEntity(); // ein HttpObjekt wird erzeugt,bzw gefüllt (Statusleiste,											// Parameter, Content)
@@ -94,14 +98,56 @@ public class Testklasse2 {
 				}
 				// byte[] jsonByte = mapper.writeValueAsBytes(stadion);
 				// System.out.println(jsonByte);
-				System.out.println(jsonString);	
+				//System.out.println(jsonString);	
 				
 			}
 			//EntityUtils.consume(entity1);
 		} finally {
 			response1.close();
 		}
-
+				
+		ObjectNode collectionNode = mapper.createObjectNode();
+		ArrayNode features = mapper.createArrayNode();
+		ObjectNode feature1 = mapper.createObjectNode();
+		
+		ObjectNode properties1 = mapper.createObjectNode();
+		ObjectNode geometry = mapper.createObjectNode();
+		Double[] coord = new Double[2];
+		coord[0] = 51.555;
+		coord[1] = -0.108611;
+		
+		geometry.put("type", "Point");
+		geometry.putPOJO("coordinates", coord);
+		
+        feature1.put("type", "Feature");
+        feature1.putPOJO("properties", properties1);
+        feature1.putPOJO("geometry", geometry);
+		
+        features.add(feature1);
+		
+		collectionNode.put("type","FeatureCollection");
+		//collectionNode.put("features", features);
+		collectionNode.putPOJO("features", features);
+		
+		System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(collectionNode));
+		System.out.println();
+		
+		/*
+		ArrayNode CollectionArray = mapper.createArrayNode();
+		ObjectNode author1 = mapper.createObjectNode();
+        author1.put("type","FeatureCollection");
+        author1.put("features","");
+        
+        ObjectNode objectNode1 = mapper.createObjectNode();
+        objectNode1.put("type", "Feature");
+        objectNode1.put("properties", "");
+        objectNode1.put("geometry", "");
+        
+        CollectionArray.add(author1);
+        CollectionArray.add(objectNode1);
+        
+        System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(CollectionArray));
+        */
 		//System.out.println(stadien.toString());
 	}
 
