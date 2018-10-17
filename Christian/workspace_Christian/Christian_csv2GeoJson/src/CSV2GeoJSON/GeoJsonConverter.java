@@ -1,5 +1,7 @@
 package CSV2GeoJSON;
 
+
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -7,7 +9,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 import org.apache.http.HttpEntity;
@@ -20,15 +21,19 @@ import org.apache.http.impl.client.HttpClients;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+
 public class GeoJsonConverter {
 
+	// Attribute
 	private String propUrl;
 	private String propSep;
 	private String propXField;
 	private String propYField;
 	private String propZiel;
 
+	// Properties-Datei
 	public GeoJsonConverter(String proptiesSpeicher, String propUrl, String propSep, String propXField, String propYField, String propZiel) {
+		// Einlesen
 		Properties properties = new Properties();
 		try {
 		BufferedInputStream stream = new BufferedInputStream(new FileInputStream(proptiesSpeicher));
@@ -38,6 +43,7 @@ public class GeoJsonConverter {
 			e.printStackTrace();
 		}
 		
+		// Inhalte der Properties-Datei zuweisen
 		this.propUrl = properties.getProperty("url");
 		this.propSep = properties.getProperty("fieldSep");
 		this.propXField = properties.getProperty("xFeld");
@@ -45,14 +51,16 @@ public class GeoJsonConverter {
 		this.propZiel = properties.getProperty("ort");
 	}
 
+	//  Website einlesen
 	public BufferedReader readWebsite() throws Exception {
 		try {
+			// HTTP-Client kontaktieren
 			BufferedReader buffR;
 			CloseableHttpClient httpclient = HttpClients.createDefault();
 			HttpGet httpGet = new HttpGet(propUrl);
 			CloseableHttpResponse response1 = httpclient.execute(httpGet);
-			HttpEntity entity1 = response1.getEntity(); // ein HttpObjekt wird erzeugt,bzw gefüllt (Statusleiste, //
-														// Parameter, Content)
+			
+			HttpEntity entity1 = response1.getEntity(); // ein HttpObjekt wird erzeugt,bzw gefüllt (Statusleiste, Parameter, Content)
 			InputStream httpcontent1 = entity1.getContent(); // Inhalt abfragen
 			InputStreamReader inStream = new InputStreamReader(httpcontent1); // Inhalt wird gelesen
 			buffR = new BufferedReader(inStream);
@@ -64,6 +72,7 @@ public class GeoJsonConverter {
 		}
 	}
 
+	// CSV lesen
 	public ArrayList<Stadion> readCSV(BufferedReader buffR1) throws Exception {
 		
 		try {
@@ -92,6 +101,7 @@ public class GeoJsonConverter {
 		
 	}
 
+	// Umwandlung in GeoJSON
 	public String createGEOJSON(ArrayList<Stadion> stadien1) throws Exception {
 		
 		try {

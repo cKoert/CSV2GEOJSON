@@ -6,17 +6,20 @@ public class Stadion {
 	private String team;
 	private String fdcouk;
 	private String city;
+	private String stadion;
 	private String capacity;
 	private String lat;
 	private String lon;
 	private String country;
 
 	// Konstruktor
-	public Stadion(String team, String fdcouk, String city, String capacity, String lat, String lon, String country) {
+	public Stadion(String team, String fdcouk, String city, String stadion, String capacity, String lat, String lon,
+			String country) {
 		super();
 		this.team = team;
 		this.fdcouk = fdcouk;
 		this.city = city;
+		this.stadion = stadion;
 		this.capacity = capacity;
 		this.lat = lat;
 		this.lon = lon;
@@ -47,6 +50,14 @@ public class Stadion {
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+
+	public String getStadium() {
+		return stadion;
+	}
+
+	public void setStadium(String stadium) {
+		this.stadion = stadion;
 	}
 
 	public String getCapacity() {

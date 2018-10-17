@@ -19,9 +19,7 @@ public class TestJacksonStadion {
 			jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stadium);
 			System.out.println(jsonString);
 
-		} catch (
-
-		JsonParseException e) {
+		} catch (JsonParseException e) {
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
 			e.printStackTrace();
