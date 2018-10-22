@@ -3,8 +3,8 @@
 /**/.settings
 /**/bin
 /Tim/workspace-tim/.metadata
-*jar
-*class
+**.jar
+**.class
 /.metadata/
 /bin/
 /.recommenders/
