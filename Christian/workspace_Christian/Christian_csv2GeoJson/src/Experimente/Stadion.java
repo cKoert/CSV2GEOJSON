@@ -1,6 +1,6 @@
 package Experimente;
 
-public class StadionExp {
+public class Stadion {
 	private String team;
 	private String fDCOUK;
 	private String city;
@@ -10,7 +10,7 @@ public class StadionExp {
 	private String longitude;
 	private String country;
 	
-	public StadionExp(String team, String fDCOUK, String city, String stadium, String capacity, String latitude,
+	public Stadion(String team, String fDCOUK, String city, String stadium, String capacity, String latitude,
 			String longitude, String country) {
 		super();
 		this.team = team;

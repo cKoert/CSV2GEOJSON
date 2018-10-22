@@ -1,38 +1,16 @@
 package Experimente;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-
+import java.util.ArrayList;
 
 public class Testklasse {
 
-	public static void main(String[] args) throws Exception {
-		
-		
-		StringBuffer sBuff = new StringBuffer();
-		
-		HttpClient client = new DefaultHttpClient();
-		HttpGet request = new HttpGet("https://raw.githubusercontent.com/jokecamp/FootballData/master/other/stadiums-with-GPS-coordinates.csv");
-		HttpResponse response = client.execute(request);
-
-		// Get the response
-		BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-
-		String line = "";
-		
-		
-		while ((line = rd.readLine()) != null) {
-			//line.s
-			sBuff.append(line + "\n");
-		}
-		System.out.println(sBuff.toString());
-		
-	
+	public static void main(String[] args) throws Exception{
+		String dateipfad = "C:\\Users\\chris\\OneDrive for Business\\SHK_Stelle\\CSV2GEOJSON\\stadien.properties";
+		GeoJsonConverter2 kurowski = new GeoJsonConverter2(dateipfad, "url", "fieldSep", "xField", "yField", "ort");
+		BufferedReader buffR = kurowski.readWebsite();
+		ArrayList<Stadion> stadien =  kurowski.readCSV(buffR);
+		String geoJson = kurowski.createGEOJSON(stadien);
+		System.out.println(geoJson);
 	}
-
 }
