@@ -35,7 +35,7 @@ public class GeoJsonConverter {
 	private String propZiel;
 
 	// Properties-Datei
-	public GeoJsonConverter(String proptiesSpeicher, String propUrl, String propSep, String propXField, String propYField, String propZiel) {
+	public GeoJsonConverter(String proptiesSpeicher) {
 		// Einlesen
 		Properties properties = new Properties();
 		try {

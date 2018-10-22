@@ -7,7 +7,8 @@ public class Testklasse {
 
 	public static void main(String[] args) throws Exception{
 		String dateipfad = "C:\\Users\\chris\\OneDrive for Business\\SHK_Stelle\\CSV2GEOJSON\\stadien.properties";
-		GeoJsonConverter kurowski = new GeoJsonConverter(dateipfad, "url", "fieldSep", "xField", "yField", "ort");
+
+		GeoJsonConverter kurowski = new GeoJsonConverter(dateipfad);
 		BufferedReader buffR = kurowski.readWebsite();
 		ArrayList<Stadion> stadien =  kurowski.readCSV(buffR);
 		kurowski.createGEOJSON(stadien);
