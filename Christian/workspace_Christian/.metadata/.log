@@ -669,3 +669,114 @@ java.net.UnknownHostException: www.genuitec.com
 	at com.genuitec.eclipse.core.account.internal.GenuitecAccountManagerImpl$_A.A(Unknown Source)
 	at com.genuitec.eclipse.core.account.internal.GenuitecAccountManagerImpl$_A.run(Unknown Source)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.genuitec.eclipse.startup 4 0 2018-10-22 07:42:52.820
+!MESSAGE C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+!STACK 0
+java.nio.file.FileSystemException: C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(Unknown Source)
+	at java.nio.file.spi.FileSystemProvider.newOutputStream(Unknown Source)
+	at java.nio.file.Files.newOutputStream(Unknown Source)
+	at java.nio.file.Files.write(Unknown Source)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.saveWorkspaceData(WorkspaceDataProvider.java:171)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.putData(WorkspaceDataProvider.java:163)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.checkDataLoaded(WorkspaceTracker.java:290)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.doSaveResults(WorkspaceTracker.java:315)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker$SaveJob.run(WorkspaceTracker.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.genuitec.eclipse.startup 4 0 2018-10-22 07:42:52.825
+!MESSAGE C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+!STACK 0
+java.nio.file.FileSystemException: C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(Unknown Source)
+	at java.nio.file.spi.FileSystemProvider.newOutputStream(Unknown Source)
+	at java.nio.file.Files.newOutputStream(Unknown Source)
+	at java.nio.file.Files.write(Unknown Source)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.saveWorkspaceData(WorkspaceDataProvider.java:171)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.putData(WorkspaceDataProvider.java:163)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.doSaveResults(WorkspaceTracker.java:318)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker$SaveJob.run(WorkspaceTracker.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.genuitec.eclipse.startup 4 0 2018-10-22 07:42:52.932
+!MESSAGE C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+!STACK 0
+java.nio.file.FileSystemException: C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(Unknown Source)
+	at java.nio.file.spi.FileSystemProvider.newOutputStream(Unknown Source)
+	at java.nio.file.Files.newOutputStream(Unknown Source)
+	at java.nio.file.Files.write(Unknown Source)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.saveWorkspaceData(WorkspaceDataProvider.java:171)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.putData(WorkspaceDataProvider.java:163)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.checkDataLoaded(WorkspaceTracker.java:290)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.resourceChanged(WorkspaceTracker.java:263)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2253)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.genuitec.eclipse.startup 4 0 2018-10-22 07:42:53.161
+!MESSAGE C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+!STACK 0
+java.nio.file.FileSystemException: C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(Unknown Source)
+	at java.nio.file.spi.FileSystemProvider.newOutputStream(Unknown Source)
+	at java.nio.file.Files.newOutputStream(Unknown Source)
+	at java.nio.file.Files.write(Unknown Source)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.saveWorkspaceData(WorkspaceDataProvider.java:171)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.putData(WorkspaceDataProvider.java:163)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.checkDataLoaded(WorkspaceTracker.java:290)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.doSaveResults(WorkspaceTracker.java:315)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker$SaveJob.run(WorkspaceTracker.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.genuitec.eclipse.startup 4 0 2018-10-22 07:42:53.167
+!MESSAGE C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+!STACK 0
+java.nio.file.FileSystemException: C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(Unknown Source)
+	at java.nio.file.spi.FileSystemProvider.newOutputStream(Unknown Source)
+	at java.nio.file.Files.newOutputStream(Unknown Source)
+	at java.nio.file.Files.write(Unknown Source)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.saveWorkspaceData(WorkspaceDataProvider.java:171)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.putData(WorkspaceDataProvider.java:163)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.doSaveResults(WorkspaceTracker.java:318)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker$SaveJob.run(WorkspaceTracker.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
