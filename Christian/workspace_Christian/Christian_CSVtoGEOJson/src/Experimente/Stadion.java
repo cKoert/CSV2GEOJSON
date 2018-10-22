@@ -1,4 +1,4 @@
-package TestPackage;
+package Experimente;
 
 public class Stadion {
 	private String team;

@@ -1,5 +1,4 @@
 INDEX VERSION 1.130+C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\org.eclipse.jdt.core
-1762024218.index
 4257325822.index
 459470480.index
 304290290.index

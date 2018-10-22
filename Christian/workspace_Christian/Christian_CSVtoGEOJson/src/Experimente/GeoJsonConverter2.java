@@ -1,4 +1,4 @@
-package TestPackage;
+package Experimente;
 
 
 
@@ -24,7 +24,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 
-public class GeoJsonConverter {
+public class GeoJsonConverter2 {
 
 	// Attribute
 	private String propUrl;
@@ -34,7 +34,7 @@ public class GeoJsonConverter {
 	private String propZiel;
 
 	// Properties-Datei
-	public GeoJsonConverter(String proptiesSpeicher, String propUrl, String propSep, String propXField, String propYField, String propZiel) {
+	public GeoJsonConverter2(String proptiesSpeicher, String propUrl, String propSep, String propXField, String propYField, String propZiel) {
 		// Einlesen
 		Properties properties = new Properties();
 		try {
@@ -105,6 +105,8 @@ public class GeoJsonConverter {
 
 	// Umwandlung in GeoJSON
 	public String createGEOJSON(ArrayList<Stadion> stadien1) throws Exception {
+		return "Ende";
+		/*
 		try {
 			String jsonString = "";
 			ArrayList<Stadion> stadien = stadien1;
@@ -142,6 +144,7 @@ public class GeoJsonConverter {
 		} catch (JsonProcessingException e) {
 			throw e;
 		}
+		*/
 		
 	}
 }
