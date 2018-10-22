@@ -1,4 +1,4 @@
-package CSVtoGeoJson;
+package Experimente2;
 
 
 
@@ -8,8 +8,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Properties;
+
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
@@ -25,8 +28,11 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 
-public class GeoJsonConverter {
+public class GeoJsonConverter{
 
+	//CSV variable;
+	CSV feature;
+	
 	// Attribute
 	private String propUrl;
 	private String propSep;
@@ -52,6 +58,7 @@ public class GeoJsonConverter {
 		this.propXField = properties.getProperty("xFeld");
 		this.propYField = properties.getProperty("yFeld");
 		this.propZiel = properties.getProperty("ort");
+		
 	}
 
 	//  Website einlesen
@@ -75,29 +82,46 @@ public class GeoJsonConverter {
 		}
 	}
 
+	
+
 	// CSV lesen
-	public ArrayList<Stadion> readCSV(BufferedReader buffR1) throws Exception {
+	public ArrayList<CSV> readCSV(BufferedReader buffR1) throws Exception {
 		
 		try {
 			BufferedReader buffR = buffR1;
-			ArrayList<Stadion> stadien = new ArrayList<Stadion>();
+			ArrayList<CSV> alleFeatures = new ArrayList<CSV>();
 			// Damit Schleife funktioniert
 			String line = ""; // Leerer Startwert
 			// Erste Zeile filtern
 			String[] feldNamen; // Spaltenüberschriften
 			boolean ersteZeile = true;
 			while ((line = buffR.readLine()) != null) {
-				String[] stadAr = line.split(propSep);
+				String[] zeilenAttrSArray = line.split(propSep);
+				CSV feature = new CSV(zeilenAttrSArray.length);
 				if (ersteZeile == true) {
-					feldNamen = stadAr;
+					feldNamen = zeilenAttrSArray;
 					ersteZeile = false;
+					
+					//Das alles auslagern?!
+					feature = new CSV(zeilenAttrSArray.length);
+					int stelleXFeld = 6; //Arrays.binarySearch(zeilenAttrSArray, propXField);
+					int stelleYFeld = 5; //Arrays.binarySearch(zeilenAttrSArray, propYField);
+					feature.setStelleKooridnaten(stelleXFeld, stelleYFeld);
+					//System.out.println(feature.getStelleKooridnaten());
 				} else {
+					for(int i = 0; i < zeilenAttrSArray.length; i++) {
+						feature.setAttribut(i, zeilenAttrSArray[i]);
+					}
+				alleFeatures.add(feature);	
+					/*
 					Stadion stadion = new Stadion(stadAr[0], stadAr[1], stadAr[2], stadAr[3], stadAr[4], stadAr[5],
 							stadAr[6], stadAr[7]);
 					stadien.add(stadion);
+					*/
+					
 				}
 			}
-			return stadien;
+			return alleFeatures;
 		} catch (IOException e) {
 			throw e;
 		}
@@ -105,16 +129,16 @@ public class GeoJsonConverter {
 	}
 
 	// Umwandlung in GeoJSON
-	public void createGEOJSON(ArrayList<Stadion> stadien1) throws Exception {
+	public String createGEOJSON(ArrayList<CSV> alleFeatures1) throws Exception {
 		try {
 			String jsonString = "";
-			ArrayList<Stadion> stadien = stadien1;
+			ArrayList<CSV> alleFeatures = alleFeatures1;
 			ObjectMapper mapper = new ObjectMapper();
 			
 			ObjectNode collectionNode = mapper.createObjectNode();
 			ArrayNode features = mapper.createArrayNode();
 			
-			for (int i = 0; i < stadien.size(); i++) {				
+			for (int i = 0; i < alleFeatures.size(); i++) {				
 				//GEOJson anlegen
 				ObjectNode feature1 = mapper.createObjectNode();
 				ObjectNode properties1 = mapper.createObjectNode();
@@ -122,14 +146,15 @@ public class GeoJsonConverter {
 				
 				feature1.put("type", "Feature");
 				//geometry anlegen
+				
 				Double[] coord = new Double[2];
-				coord[0] = Double.parseDouble(stadien.get(i).getLongitude());
-				coord[1] = Double.parseDouble(stadien.get(i).getLatitude());
+				coord[0] = Double.parseDouble(alleFeatures.get(i).getLongitude());
+				coord[1] = Double.parseDouble(alleFeatures.get(i).getLatitude());
 				geometry.put("type", "Point");
 				geometry.putPOJO("coordinates", coord);
 				
 				//properies anlegen
-				ObjectNode properties = mapper.valueToTree(stadien.get(i));
+				ObjectNode properties = mapper.valueToTree(alleFeatures.get(i));
 				
 				//Feature bestandteile hinzufügen
 		        feature1.putPOJO("properties", properties);
@@ -141,7 +166,7 @@ public class GeoJsonConverter {
 		collectionNode.put("type","FeatureCollection");
 		collectionNode.putPOJO("features", features);
 		System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(collectionNode));
-		//return "Ende";
+		return "Ende";
 		} catch (JsonProcessingException e) {
 			throw e;
 		}

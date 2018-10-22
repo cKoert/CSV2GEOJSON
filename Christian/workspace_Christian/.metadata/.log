@@ -780,3 +780,32 @@ java.nio.file.FileSystemException: C:\Users\chris\OneDrive for Business\SHK_Stel
 	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.doSaveResults(WorkspaceTracker.java:318)
 	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker$SaveJob.run(WorkspaceTracker.java:86)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.genuitec.eclipse.startup 4 0 2018-10-22 09:03:31.688
+!MESSAGE C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+!STACK 0
+java.nio.file.FileSystemException: C:\Users\chris\OneDrive for Business\SHK_Stelle\CSV2GEOJSON\Christian\workspace_Christian\.metadata\.plugins\com.genuitec.eclipse.devstyle\recent.json: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.
+
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(Unknown Source)
+	at java.nio.file.spi.FileSystemProvider.newOutputStream(Unknown Source)
+	at java.nio.file.Files.newOutputStream(Unknown Source)
+	at java.nio.file.Files.write(Unknown Source)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.saveWorkspaceData(WorkspaceDataProvider.java:171)
+	at com.genuitec.eclipse.startup.model.WorkspaceDataProvider.putData(WorkspaceDataProvider.java:163)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.checkDataLoaded(WorkspaceTracker.java:290)
+	at com.genuitec.eclipse.startup.workspace.WorkspaceTracker.resourceChanged(WorkspaceTracker.java:263)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.handleEvent(NotificationManager.java:271)
+	at org.eclipse.core.internal.resources.Workspace.broadcastEvent(Workspace.java:369)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1559)
+	at org.eclipse.egit.ui.Activator$ResourceRefreshJob$1.run(Activator.java:531)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.egit.ui.Activator$ResourceRefreshJob.run(Activator.java:516)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
