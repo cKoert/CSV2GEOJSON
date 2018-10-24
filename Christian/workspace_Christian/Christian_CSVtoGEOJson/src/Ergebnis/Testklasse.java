@@ -3,7 +3,6 @@ package Ergebnis;
 import java.io.BufferedReader;
 import java.util.ArrayList;
 
-import CSVtoGeoJson.Stadion;
 
 public class Testklasse {
 
