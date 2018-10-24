@@ -32,6 +32,7 @@ public class PropertiesObject {
 		this.propXField = properties.getProperty("xFeld");
 		this.propYField = properties.getProperty("yFeld");
 		this.propZiel = properties.getProperty("ort");
+		this.propZiel.replaceAll("\\\\", "\\");
 	}
 	
 	public String getPropUrl() {
