@@ -19,6 +19,9 @@ public class Testklasse {
 		
 		String geoJsonString = geoJson.createGEOJSON();
 		
+		GeoJsonFile file = new GeoJsonFile(geoJsonString, prop.getPropZiel());
+		file.createFile();
+		
 		System.out.println(geoJsonString);
 
 	}
