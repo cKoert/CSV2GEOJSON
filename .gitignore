@@ -1,10 +1,6 @@
-/**/.metadata
-/**/.recommenders
-/**/.settings
-/**/bin
-/Tim/workspace-tim/.metadata
-**.jar
-**.class
-/.metadata/
-/bin/
-/.recommenders/
+### Eclipse ###
+
+.classpath
+bin/
+tmp/
+.settings/
