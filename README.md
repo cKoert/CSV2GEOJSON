@@ -1,3 +1,11 @@
-﻿# CSV2GEOJSON
+﻿# CSV2GEOJSON-Converter
+ 
+ ## Description
+ 
+ ## Installation
+ 
+ ## Usage
+ 
+ ## Credits
+ 
 
-Java Version 1.8
