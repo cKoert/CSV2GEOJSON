@@ -7,7 +7,8 @@ import java.util.ArrayList;
 public class Testklasse {
 
 	public static void main(String[] args) throws Exception{
-		String dateipfad = "C:\\Users\\chris\\OneDrive for Business\\SHK_Stelle\\CSV2GEOJSON\\stadien.properties";
+		
+		String dateipfad = args[0];
 		PropertiesObject prop = new PropertiesObject(dateipfad);
 		HtmlObject html = new HtmlObject(prop.getPropUrl());
 		
@@ -18,10 +19,12 @@ public class Testklasse {
 		GeoJsonObject geoJson = new GeoJsonObject(blindert);
 		
 		String geoJsonString = geoJson.createGEOJSON();
-		
+		/*
 		GeoJsonFile file = new GeoJsonFile(geoJsonString, prop.getPropZiel());
 		file.createFile();
-		
+		*/
+		System.out.println(prop.getPropZiel());
+		System.out.println(prop.getPropUrl());
 		System.out.println(geoJsonString);
 
 	}

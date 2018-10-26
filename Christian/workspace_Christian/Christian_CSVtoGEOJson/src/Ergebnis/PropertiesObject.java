@@ -1,8 +1,13 @@
 package Ergebnis;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.StringReader;
 import java.util.Properties;
 
 public class PropertiesObject {
@@ -15,13 +20,24 @@ public class PropertiesObject {
 	private String propZiel;
 
 	// Properties-Datei
-	public PropertiesObject(String proptiesSpeicher) {
+	public PropertiesObject(String propertiesSpeicher) {
 		// Einlesen
 		Properties properties = new Properties();
 		try {
-			BufferedInputStream stream = new BufferedInputStream(new FileInputStream(proptiesSpeicher));
-			properties.load(stream);
+			 File fileIn = new File(propertiesSpeicher); 
+			BufferedReader reader = new BufferedReader(new FileReader(fileIn)); 
+			properties.load(reader);
+			 reader.close();
+			/*
+			File fileIn = new File(propertiesSpeicher);
+			ObjectInputStream stream = new ObjectInputStream(new FileInputStream(fileIn));
+			String InputString = (String) stream.readObject();
+			properties.load(new StringReader(InputString.replace("\\", "\\\\")));
 			stream.close();
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			*/
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -32,7 +48,7 @@ public class PropertiesObject {
 		this.propXField = properties.getProperty("xFeld");
 		this.propYField = properties.getProperty("yFeld");
 		this.propZiel = properties.getProperty("ort");
-		this.propZiel.replaceAll("\\\\", "\\");
+		// this.propZiel = propZiel.replaceAll("\\", "//");
 	}
 	
 	public String getPropUrl() {

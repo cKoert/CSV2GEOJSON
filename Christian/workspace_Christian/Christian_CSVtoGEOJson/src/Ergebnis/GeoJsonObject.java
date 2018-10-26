@@ -22,7 +22,6 @@ public class GeoJsonObject {
 	// Umwandlung in GeoJSON
 	public String createGEOJSON() throws Exception {
 		try {
-			String jsonString = "";
 			ArrayList<Stadion> stadien = stadien1;
 			ObjectMapper mapper = new ObjectMapper();
 
