@@ -23,7 +23,7 @@ public class CsvObject {
 		this.propYField = propYField;
 	}
 		
-	
+	//Read CSV and return ArrayList
 	public ArrayList<Stadion> readCSV() throws Exception {
 		try {
 			ArrayList<Stadion> stadien = new ArrayList<Stadion>();
