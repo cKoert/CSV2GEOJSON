@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;test&apos;" deleteContents="true" description="Delete resource &apos;test&apos;" element1="/test" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1539174718607"/>&#x0A;<refactoring comment="Delete resource &apos;CSVtoGeoJSON&apos;" deleteContents="false" description="Delete resource &apos;CSVtoGeoJSON&apos;" element1="/CSVtoGeoJSON" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1539334812362"/>
-</session>

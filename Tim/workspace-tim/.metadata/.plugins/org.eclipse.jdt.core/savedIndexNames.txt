@@ -1,2 +1,0 @@
-INDEX VERSION 1.130+E:\Google Drive\Arbeit\GIT\CSV2GEOJSON\Tim\workspace-tim\.metadata\.plugins\org.eclipse.jdt.core
-4257325822.index
