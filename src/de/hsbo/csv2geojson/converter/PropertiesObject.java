@@ -17,7 +17,10 @@ public class PropertiesObject {
 	private String propSep;
 	private String propXField;
 	private String propYField;
-	private String propZiel;
+	private String propDest;
+	private String relFields;
+	private String[] sepFields;
+	
 
 	// Properties-Datei
 	public PropertiesObject(String propertiesSpeicher) {
@@ -45,11 +48,13 @@ public class PropertiesObject {
 		// Inhalte der Properties-Datei zuweisen
 		this.propUrl = properties.getProperty("url");
 		this.propSep = properties.getProperty("fieldSep");
-		this.propXField = properties.getProperty("xFeld");
-		this.propYField = properties.getProperty("yFeld");
-		this.propZiel = properties.getProperty("ort");
-		// this.propZiel = propZiel.replaceAll("\\", "//");
+		this.propXField = properties.getProperty("xField");
+		this.propYField = properties.getProperty("yField");
+		this.propDest = properties.getProperty("dest"); // To read the single '\' there must be an odd number of '\'s in the .properties file
+		this.relFields = properties.getProperty("relevantFields");
+		this.sepFields = relFields.split(",");
 	}
+	
 	
 	public String getPropUrl() {
 		return propUrl;
@@ -83,13 +88,23 @@ public class PropertiesObject {
 		this.propYField = propYField;
 	}
 
-	public String getPropZiel() {
-		return propZiel;
+	public String getPropDest() {
+		return propDest;
 	}
 
-	public void setPropZiel(String propZiel) {
-		this.propZiel = propZiel;
+	public void setPropDest(String propZiel) {
+		this.propDest = propZiel;
 	}
+	
+	public String[] getSepFields() {
+		return sepFields;
+	}
+
+	public void setSepFields(String[] sepFields) {
+		this.sepFields = sepFields;
+	}
+	
+
 
 
 }
