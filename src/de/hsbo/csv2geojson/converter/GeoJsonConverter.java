@@ -10,15 +10,20 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import de.hsbo.csv2geojson.geometry.CsvPoint;
 
+/**
+ * This class converts the ArrayList to a GeoJSON-file
+ * constructor uses points with coordinate describing column names
+ * using GeoJSON-syntax
+ */
 
 public class GeoJsonConverter {
 
-	// Attribute
+	// attributes
 	ArrayList<CsvPoint> points;
 	String xField;
 	String yField;
 
-	// Konstrujtor
+	// constructor
 	public GeoJsonConverter(ArrayList<CsvPoint> points, String xField, String yField) {
 		super();
 		this.points = points;
@@ -26,38 +31,36 @@ public class GeoJsonConverter {
 		this.yField = yField;
 	}
 
-	// Umwandlung in GeoJSON
+	// convert
 	public String createGEOJSON() throws Exception {
 		try {
-			//Set<Point> points = points;
 			ObjectMapper mapper = new ObjectMapper();
 
 			ObjectNode collectionNode = mapper.createObjectNode();
 			ArrayNode features = mapper.createArrayNode();
 
 			for (int i = 0; i < points.size(); i++) {
-				// GEOJson anlegen
+				// create GeoJSON nodes
 				ObjectNode feature1 = mapper.createObjectNode();
 				ObjectNode properties1 = mapper.createObjectNode();
 				ObjectNode geometry = mapper.createObjectNode();
 
 				feature1.put("type", "Feature");
-				// geometry anlegen
+				// fill geometry node
 				Double[] coord = new Double[2];
 				coord[0] = Double.parseDouble(points.get(i).getLongitude(xField));
 				coord[1] = Double.parseDouble(points.get(i).getLatitude(yField));
 				geometry.put("type", "Point");
 				geometry.putPOJO("coordinates", coord);
 
-				// properies anlegen
+				// create node
 				ObjectNode properties = mapper.valueToTree(points.get(i).getPoints());
 
-				// Feature bestandteile hinzufügen
+				// add properties and geometry to feature node
 				feature1.putPOJO("properties", properties);
 				feature1.putPOJO("geometry", geometry);
 
 				features.add(feature1);
-				// break;
 			}
 			collectionNode.put("type", "FeatureCollection");
 			collectionNode.putPOJO("features", features);

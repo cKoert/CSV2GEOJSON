@@ -33,8 +33,7 @@ public class Testklasse{
 		GeoJsonFileWriter file = new GeoJsonFileWriter(geoJsonString, prop.getPropDest());
 		file.createFile();
 		
-		System.out.println();
-		System.out.println(prop.getPropDest());
+		System.out.println("created geojson-file");
 		// System.out.println(prop.getPropUrl());
 		//System.out.println(geoJsonString);
 		//System.out.println(prop.getSepFields());

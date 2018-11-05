@@ -6,51 +6,53 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropertiesReader {
-	
-	// Attribute
-	private String propUrl;
-	private String propSep;
-	private String propXField;
-	private String propYField;
-	private String propDest;
-	private String relFields;
-	private String[] sepFields;
-	
+/**
+ * This class reads the single properties of the properties-file. read the
+ * properties file with a BufferedReader use java util class "properties" to
+ * create an object read the object with given methods
+ */
 
-	// Properties-Datei
+public class PropertiesReader {
+
+	// attributes
+	private String propUrl; // url
+	private String propSep; // field separator
+	private String propXField; // longitude
+	private String propYField; // latitude
+	private String propTarget; // target location
+	private String relFields; // columns to be transferred
+	private String[] sepFields; // origin columns
+
+	/*
+	 * constructor to create a propertiesReader-object
+	 */
 	public PropertiesReader(String propertiesSpeicher) {
-		// Einlesen
+		// read
 		Properties properties = new Properties();
 		try {
-			 File fileIn = new File(propertiesSpeicher); 
-			BufferedReader reader = new BufferedReader(new FileReader(fileIn)); 
-			properties.load(reader);
-			 reader.close();
-			/*
 			File fileIn = new File(propertiesSpeicher);
-			ObjectInputStream stream = new ObjectInputStream(new FileInputStream(fileIn));
-			String InputString = (String) stream.readObject();
-			properties.load(new StringReader(InputString.replace("\\", "\\\\")));
-			stream.close();
-			
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			*/
+			BufferedReader reader = new BufferedReader(new FileReader(fileIn));
+			properties.load(reader);
+			reader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		// Inhalte der Properties-Datei zuweisen
+		/*
+		 * assign contents to attributes
+		 */
 		this.propUrl = properties.getProperty("url");
 		this.propSep = properties.getProperty("fieldSep");
 		this.propXField = properties.getProperty("xField");
 		this.propYField = properties.getProperty("yField");
-		this.propDest = properties.getProperty("dest"); // To read the single '\' there must be an odd number of '\'s in the .properties file
-		this.relFields = properties.getProperty("relevantFields");
-		this.sepFields = relFields.split(",");
+		this.propTarget = properties.getProperty("dest"); 			// To read the single '\' there must be an odd number of '\'s in the .properties file
+		this.relFields = properties.getProperty("relevantFields");	// relevant columns
+		this.sepFields = relFields.split(",");						// all columns
 	}
-	
+
+	/*
+	 * getter and setter methods
+	 */
 	
 	public String getPropUrl() {
 		return propUrl;
@@ -85,13 +87,13 @@ public class PropertiesReader {
 	}
 
 	public String getPropDest() {
-		return propDest;
+		return propTarget;
 	}
 
 	public void setPropDest(String propZiel) {
-		this.propDest = propZiel;
+		this.propTarget = propZiel;
 	}
-	
+
 	public String[] getSepFields() {
 		return sepFields;
 	}
@@ -99,8 +101,5 @@ public class PropertiesReader {
 	public void setSepFields(String[] sepFields) {
 		this.sepFields = sepFields;
 	}
-	
-
-
 
 }

@@ -12,34 +12,37 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
+/**
+ * This class reads URL of the CSV-File from the properties-File.
+ * The class transfers it into a BufferedReader
+ */
+
 public class HtmlReader {
 
-	// Attribute
+	// attributes
 	String propUrl;
 
-	// Konstruktor
+	// constructor
 	public HtmlReader(String propUrl) {
 		this.propUrl = propUrl;
 	}
 
-	//Methode
 	public BufferedReader readWebsite() throws Exception {
 		try {
-			// HTTP-Client kontaktieren
+			// contact http-client
 			BufferedReader buffR;
 			CloseableHttpClient httpclient = HttpClients.createDefault();
 			HttpGet httpGet = new HttpGet(propUrl);
 			CloseableHttpResponse response1 = httpclient.execute(httpGet);
 
-			HttpEntity entity1 = response1.getEntity(); // ein HttpObjekt wird erzeugt,bzw gefüllt (Statusleiste,
-														// Parameter, Content)
-			InputStream httpcontent1 = entity1.getContent(); // Inhalt abfragen
-			InputStreamReader inStream = new InputStreamReader(httpcontent1); // Inhalt wird gelesen
+			HttpEntity entity1 = response1.getEntity(); // fill http-Object (status, parameters, content)
+			InputStream httpcontent1 = entity1.getContent(); // ask for content
+			InputStreamReader inStream = new InputStreamReader(httpcontent1); // read content
 			buffR = new BufferedReader(inStream);
 			return buffR;
 		} catch (ClientProtocolException c) {
 			throw c;
-		} catch (IOException e) { // immer zum Schluss
+		} catch (IOException e) {
 			throw e;
 		}
 	}

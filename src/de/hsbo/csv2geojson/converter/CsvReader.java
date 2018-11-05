@@ -7,15 +7,21 @@ import java.util.HashMap;
 
 import de.hsbo.csv2geojson.geometry.CsvPoint;
 
+/**
+ * This class reads the BufferedReader (csv-file)
+ * each line is converted to a point object (only relevant fields)
+ * points are added to a ArrayList
+ */
+
 public class CsvReader {
 
-	// Attribute
+	// attributes
 	BufferedReader buffR;
 	String propSep;
 	String propXField;
 	String propYField;
 
-	// Konstruktor
+	// constructor
 	public CsvReader(BufferedReader buffR, String propSep, String propXField, String propYField) {
 		super();
 		this.buffR = buffR;
@@ -28,8 +34,8 @@ public class CsvReader {
 	public ArrayList<CsvPoint> readCSV(String[] relFields) throws Exception {
 		try {
 			ArrayList<CsvPoint> points = new ArrayList<CsvPoint>();
-			// Damit Schleife funktioniert
-			String line = ""; // Leerer Startwert
+			// to make loop work
+			String line = ""; // empty starting value
 			boolean ersteZeile = true;
 			Boolean[] usedFields = new Boolean[8];
 			while ((line = buffR.readLine()) != null) {
