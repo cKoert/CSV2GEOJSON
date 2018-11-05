@@ -1,13 +1,9 @@
 package de.hsbo.csv2geojson.converter;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.StringReader;
 import java.util.Properties;
 
 public class PropertiesObject {

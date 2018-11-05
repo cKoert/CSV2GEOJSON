@@ -10,7 +10,6 @@ import de.hsbo.csv2geojson.converter.GeoJsonObject;
 import de.hsbo.csv2geojson.converter.HtmlObject;
 import de.hsbo.csv2geojson.converter.PropertiesObject;
 import de.hsbo.csv2geojson.geometry.Point;
-import de.hsbo.csv2geojson.geometry.Stadion;
 
 
 public class Testklasse{
