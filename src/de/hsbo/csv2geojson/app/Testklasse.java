@@ -4,12 +4,12 @@ import java.io.BufferedReader;
 import java.util.ArrayList;
 
 
-import de.hsbo.csv2geojson.converter.CsvObject;
-import de.hsbo.csv2geojson.converter.GeoJsonFile;
-import de.hsbo.csv2geojson.converter.GeoJsonObject;
-import de.hsbo.csv2geojson.converter.HtmlObject;
-import de.hsbo.csv2geojson.converter.PropertiesObject;
-import de.hsbo.csv2geojson.geometry.Point;
+import de.hsbo.csv2geojson.converter.CsvReader;
+import de.hsbo.csv2geojson.converter.GeoJsonFileWriter;
+import de.hsbo.csv2geojson.converter.GeoJsonConverter;
+import de.hsbo.csv2geojson.converter.HtmlReader;
+import de.hsbo.csv2geojson.converter.PropertiesReader;
+import de.hsbo.csv2geojson.geometry.CsvPoint;
 
 
 public class Testklasse{
@@ -19,18 +19,18 @@ public class Testklasse{
 		String dateipfad =args[0];
 		//"E:\\Google Drive\\Arbeit\\Projekt_CSV2GEOJSON\\workspace-wacodis\\CSV2GEOJSON\\stadien.properties"
 		//"C:\\Users\chris\\OneDrive for Business\\SHK_Stelle\\workspace_WaCoDiS\\CSV2GEOJSON\\stadien.properties"
-		PropertiesObject prop = new PropertiesObject(dateipfad);
-		HtmlObject html = new HtmlObject(prop.getPropUrl());
+		PropertiesReader prop = new PropertiesReader(dateipfad);
+		HtmlReader html = new HtmlReader(prop.getPropUrl());
 		
 		BufferedReader kurowski = html.readWebsite();
-		CsvObject csv = new CsvObject(kurowski, prop.getPropSep(), prop.getPropXField(), prop.getPropYField());
+		CsvReader csv = new CsvReader(kurowski, prop.getPropSep(), prop.getPropXField(), prop.getPropYField());
 		
-		ArrayList<Point> blindert = csv.readCSV(prop.getSepFields());
-		GeoJsonObject geoJson = new GeoJsonObject(blindert, prop.getPropXField(), prop.getPropYField());
+		ArrayList<CsvPoint> blindert = csv.readCSV(prop.getSepFields());
+		GeoJsonConverter geoJson = new GeoJsonConverter(blindert, prop.getPropXField(), prop.getPropYField());
 		
 		String geoJsonString = geoJson.createGEOJSON();
 		
-		GeoJsonFile file = new GeoJsonFile(geoJsonString, prop.getPropDest());
+		GeoJsonFileWriter file = new GeoJsonFileWriter(geoJsonString, prop.getPropDest());
 		file.createFile();
 		
 		System.out.println();

@@ -3,11 +3,11 @@ package de.hsbo.csv2geojson.geometry;
 import java.util.HashMap;
 
 
-public class Point{
+public class CsvPoint{
 	
 	HashMap<String, String> points = new HashMap<String, String>();
 	
-	public Point(HashMap<String, String> points) {
+	public CsvPoint(HashMap<String, String> points) {
 		this.points = points;
 	}
 	

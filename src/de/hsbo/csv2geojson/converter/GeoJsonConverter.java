@@ -8,18 +8,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-import de.hsbo.csv2geojson.geometry.Point;
+import de.hsbo.csv2geojson.geometry.CsvPoint;
 
 
-public class GeoJsonObject {
+public class GeoJsonConverter {
 
 	// Attribute
-	ArrayList<Point> points;
+	ArrayList<CsvPoint> points;
 	String xField;
 	String yField;
 
 	// Konstrujtor
-	public GeoJsonObject(ArrayList<Point> points, String xField, String yField) {
+	public GeoJsonConverter(ArrayList<CsvPoint> points, String xField, String yField) {
 		super();
 		this.points = points;
 		this.xField = xField;

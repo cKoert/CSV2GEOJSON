@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropertiesObject {
+public class PropertiesReader {
 	
 	// Attribute
 	private String propUrl;
@@ -19,7 +19,7 @@ public class PropertiesObject {
 	
 
 	// Properties-Datei
-	public PropertiesObject(String propertiesSpeicher) {
+	public PropertiesReader(String propertiesSpeicher) {
 		// Einlesen
 		Properties properties = new Properties();
 		try {
