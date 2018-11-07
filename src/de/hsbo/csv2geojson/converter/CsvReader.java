@@ -2,77 +2,62 @@ package de.hsbo.csv2geojson.converter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import de.hsbo.csv2geojson.geometry.CsvPoint;
 
 /**
- * This class reads the BufferedReader (csv-file)
- * each line is converted to a point object (only relevant fields)
- * points are added to a ArrayList
+ * This class reads the BufferedReader (csv-file) each line is converted to a
+ * point object (only relevant fields) points are added to a ArrayList
  */
 
 public class CsvReader {
 
 	// attributes
-	BufferedReader buffR;
+	InputStream inStream;
 	String propSep;
 	String propXField;
 	String propYField;
 
 	// constructor
-	public CsvReader(BufferedReader buffR, String propSep, String propXField, String propYField) {
+	public CsvReader(InputStream inStream, String propSep, String propXField, String propYField) {
 		super();
-		this.buffR = buffR;
+		this.inStream = inStream;
 		this.propSep = propSep;
 		this.propXField = propXField;
 		this.propYField = propYField;
 	}
 
 	// Read CSV and return ArrayList
-	public ArrayList<CsvPoint> readCSV(String[] relFields) throws Exception {
-		try {
-			ArrayList<CsvPoint> points = new ArrayList<CsvPoint>();
-			// to make loop work
-			String line = ""; // empty starting value
-			boolean ersteZeile = true;
-			Boolean[] usedFields = new Boolean[8];
-			while ((line = buffR.readLine()) != null) {
-				HashMap<String, String> pointsAtt = new HashMap<String, String>();
-				String[] pointAr = line.split(propSep);
-				// read first line
-				if (ersteZeile == true) {
-					for (int i = 0, k = 0; i < pointAr.length; i++, k++) {
-						if (pointAr[i].equals(relFields[k])) {
-							usedFields[i] = true;
-							// test if it is a relevant field - comparison with .properties
-						} else {
-							usedFields[i] = false;
-							k--;
-						}
-					}
-					ersteZeile = false;
-					// reading the objects
-				} else if (ersteZeile == false) {
-					for (int i = 0, k = 0; i < pointAr.length; i++, k++)
-						if (usedFields[i] == true) { // test if it is a relevant field - comparison with usedFields
-							pointsAtt.put(relFields[k], pointAr[i]);
+	public ArrayList<CsvPoint> readCSV(List<String> relFields) throws IOException {
 
-						} else {
-							k--;
-						}
-					CsvPoint point = new CsvPoint(pointsAtt);
-					points.add(point);
+		InputStreamReader inStreamR = new InputStreamReader(inStream); // read content
+		BufferedReader buffR = new BufferedReader(inStreamR);
 
+		ArrayList<CsvPoint> points = new ArrayList<CsvPoint>();
+		// to make loop work
+		String line = ""; // empty starting value
+
+		line = buffR.readLine();
+		String[] columns = line.split(propSep); // all columns
+
+		while ((line = buffR.readLine()) != null) {
+			HashMap<String, String> pointsAtt = new HashMap<String, String>();
+			String[] pointAr = line.split(propSep);
+
+			for (int i = 0; i < columns.length; i++)
+				if (relFields.contains(columns[i])) { // test if it is a relevant field - comparison with usedFields
+					pointsAtt.put(columns[i], pointAr[i]);
 				}
+			CsvPoint point = new CsvPoint(pointsAtt);
+			points.add(point);
 
-			}
-			return points;
-		} catch (IOException e) {
-			throw e;
 		}
-
+		return points;
 	}
 
 }

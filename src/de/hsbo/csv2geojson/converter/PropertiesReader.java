@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Properties;
 
 /**
@@ -20,23 +23,24 @@ public class PropertiesReader {
 	private String propXField; // longitude
 	private String propYField; // latitude
 	private String propTarget; // target location
-	private String relFields; // columns to be transferred
-	private String[] sepFields; // origin columns
+	//private String relFields; // columns to be transferred
+	//private String[] sepFields; // relFields splitted in an array
+	private List<String> relFields;
 
 	/*
 	 * constructor to create a propertiesReader-object
 	 */
-	public PropertiesReader(String propertiesSpeicher) {
+	public PropertiesReader() {
+
+	}
+
+	public void readProperties(String path) throws IOException {
 		// read
 		Properties properties = new Properties();
-		try {
-			File fileIn = new File(propertiesSpeicher);
-			BufferedReader reader = new BufferedReader(new FileReader(fileIn));
-			properties.load(reader);
-			reader.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		File fileIn = new File(path);
+		BufferedReader reader = new BufferedReader(new FileReader(fileIn));
+		properties.load(reader);
+		reader.close();
 
 		/*
 		 * assign contents to attributes
@@ -45,15 +49,18 @@ public class PropertiesReader {
 		this.propSep = properties.getProperty("fieldSep");
 		this.propXField = properties.getProperty("xField");
 		this.propYField = properties.getProperty("yField");
-		this.propTarget = properties.getProperty("dest"); 			// To read the single '\' there must be an odd number of '\'s in the .properties file
-		this.relFields = properties.getProperty("relevantFields");	// relevant columns
-		this.sepFields = relFields.split(",");						// all columns
+		this.propTarget = properties.getProperty("dest"); /*
+															 * To read the single '\' there must be an odd number of
+															 * '\'s in the .properties file
+															 */
+		String relFields = properties.getProperty("relevantFields"); // relevant columns
+		this.relFields = Arrays.asList(relFields.split(",")); // all columns
 	}
 
 	/*
 	 * getter and setter methods
 	 */
-	
+
 	public String getPropUrl() {
 		return propUrl;
 	}
@@ -94,12 +101,12 @@ public class PropertiesReader {
 		this.propTarget = propZiel;
 	}
 
-	public String[] getSepFields() {
-		return sepFields;
+	public List<String> getRelFields() {
+		return relFields;
 	}
 
-	public void setSepFields(String[] sepFields) {
-		this.sepFields = sepFields;
+	public void setrelFields(List<String> relFields) {
+		this.relFields = relFields;
 	}
 
 }

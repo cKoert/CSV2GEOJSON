@@ -27,7 +27,7 @@ public class HtmlReader {
 		this.propUrl = propUrl;
 	}
 
-	public BufferedReader readWebsite() throws Exception {
+	public InputStream readWebsite() throws Exception {
 		try {
 			// contact http-client
 			BufferedReader buffR;
@@ -37,9 +37,11 @@ public class HtmlReader {
 
 			HttpEntity entity1 = response1.getEntity(); // fill http-Object (status, parameters, content)
 			InputStream httpcontent1 = entity1.getContent(); // ask for content
-			InputStreamReader inStream = new InputStreamReader(httpcontent1); // read content
-			buffR = new BufferedReader(inStream);
-			return buffR;
+			return httpcontent1;
+			/*
+			
+			
+			*/
 		} catch (ClientProtocolException c) {
 			throw c;
 		} catch (IOException e) {
