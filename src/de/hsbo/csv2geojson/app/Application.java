@@ -29,7 +29,7 @@ public class Application{
 		
 		String geoJsonString = geoJson.createGEOJSON();
 		
-		GeoJsonFileWriter file = new GeoJsonFileWriter(geoJsonString, prop.getPropDest());
+		GeoJsonFileWriter file = new GeoJsonFileWriter(geoJsonString, prop.getPropTarget());
 		file.createFile();
 		
 		System.out.println("created geojson-file");

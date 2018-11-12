@@ -46,7 +46,7 @@ public class PropertiesReader {
 		this.propSep = properties.getProperty("fieldSep");
 		this.propXField = properties.getProperty("xField");
 		this.propYField = properties.getProperty("yField");
-		this.propTarget = properties.getProperty("dest"); /*
+		this.propTarget = properties.getProperty("target"); /*
 															 * To read the single '\' there must be an odd number of
 															 * '\'s in the .properties file
 															 */
@@ -90,11 +90,11 @@ public class PropertiesReader {
 		this.propYField = propYField;
 	}
 
-	public String getPropDest() {
+	public String getPropTarget() {
 		return propTarget;
 	}
 
-	public void setPropDest(String propZiel) {
+	public void setPropTarget(String propZiel) {
 		this.propTarget = propZiel;
 	}
 
