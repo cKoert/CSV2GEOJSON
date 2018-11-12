@@ -1,16 +1,13 @@
 package de.hsbo.csv2geojson.converter;
 
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.net.URI;
 
-import javax.swing.JFileChooser;
+public class GeoJsonFileWriter implements Serializable {
 
-public class GeoJsonFileWriter implements Serializable{
-	
 	private String jsonString;
 	private String propUrl;
 
@@ -19,17 +16,12 @@ public class GeoJsonFileWriter implements Serializable{
 		this.jsonString = jsonString;
 		this.propUrl = propUrl;
 	}
-	
-	
-	public void createFile() throws Exception{
-		try {
+
+	public void createFile() throws IOException {
 		File fileOut = new File(propUrl);
-		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileOut));
-		out.writeObject(jsonString);
+		BufferedWriter out = new BufferedWriter(new FileWriter(fileOut));
+		out.write(jsonString);
 		out.close();
-		}catch(IOException e) {
-			throw e;
-		}
 
 	}
 
