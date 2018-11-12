@@ -38,7 +38,7 @@ public class CsvReader {
 		InputStreamReader inStreamR = new InputStreamReader(inStream); // read content
 		BufferedReader buffR = new BufferedReader(inStreamR);
 
-		ArrayList<CsvPoint> points = new ArrayList<CsvPoint>();
+		ArrayList<CsvPoint> pointList = new ArrayList<CsvPoint>();
 		// to make loop work
 		String line = ""; // empty starting value
 
@@ -47,17 +47,17 @@ public class CsvReader {
 
 		while ((line = buffR.readLine()) != null) {
 			HashMap<String, String> pointsAtt = new HashMap<String, String>();
-			String[] pointAr = line.split(propSep);
+			String[] featureContent = line.split(propSep);
 
 			for (int i = 0; i < columns.length; i++)
 				if (relFields.contains(columns[i])) { // test if it is a relevant field - comparison with usedFields
-					pointsAtt.put(columns[i], pointAr[i]);
+					pointsAtt.put(columns[i], featureContent[i]);
 				}
 			CsvPoint point = new CsvPoint(pointsAtt);
-			points.add(point);
+			pointList.add(point);
 
 		}
-		return points;
+		return pointList;
 	}
 
 }

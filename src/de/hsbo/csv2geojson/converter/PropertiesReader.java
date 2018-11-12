@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
@@ -23,8 +22,6 @@ public class PropertiesReader {
 	private String propXField; // longitude
 	private String propYField; // latitude
 	private String propTarget; // target location
-	//private String relFields; // columns to be transferred
-	//private String[] sepFields; // relFields splitted in an array
 	private List<String> relFields;
 
 	/*
