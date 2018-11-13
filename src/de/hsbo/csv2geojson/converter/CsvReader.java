@@ -48,14 +48,22 @@ public class CsvReader {
 		while ((line = buffR.readLine()) != null) {
 			HashMap<String, String> pointsAtt = new HashMap<String, String>();
 			String[] featureContent = line.split(propSep);
+			CsvPoint point = new CsvPoint();
 
-			for (int i = 0; i < columns.length; i++)
+			for (int i = 0; i < columns.length; i++) {
 				if (relFields.contains(columns[i])) { // test if it is a relevant field - comparison with usedFields
 					pointsAtt.put(columns[i], featureContent[i]);
 				}
-			CsvPoint point = new CsvPoint(pointsAtt);
-			pointList.add(point);
+				if (columns[i].equals(this.propXField)) { // compare column with xField from properties
+					point.setLongitude(featureContent[i]);
+				}
+				if (columns[i].equals(this.propYField)) { // // compare column with yField from properties
+					point.setLatitude(featureContent[i]);
+				}
 
+			}
+			point.setPoints(pointsAtt);
+			pointList.add(point);
 		}
 		return pointList;
 	}

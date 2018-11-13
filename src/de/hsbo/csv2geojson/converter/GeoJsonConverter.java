@@ -44,8 +44,8 @@ public class GeoJsonConverter {
 			feature.put("type", "Feature");
 			// fill geometry node
 			Double[] coord = new Double[2];
-			coord[0] = Double.parseDouble(pointList.get(i).getLongitude(xField));
-			coord[1] = Double.parseDouble(pointList.get(i).getLatitude(yField));
+			coord[0] = Double.parseDouble(pointList.get(i).getLongitude());
+			coord[1] = Double.parseDouble(pointList.get(i).getLatitude());
 			geometry.put("type", "Point");
 			geometry.putPOJO("coordinates", coord);
 
