@@ -47,7 +47,7 @@ public class CsvReader {
 
 		while ((line = buffR.readLine()) != null) {
 			HashMap<String, String> pointsAtt = new HashMap<String, String>();
-			String[] featureContent = line.split(propSep);
+			String[] featureContent = line.split(propSep, -1);	// -1 last element could be null
 			CsvPoint point = new CsvPoint();
 
 			for (int i = 0; i < columns.length; i++) {
