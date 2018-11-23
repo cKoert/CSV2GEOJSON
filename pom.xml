@@ -3,8 +3,8 @@
   <groupId>CSV2GEOJSON</groupId>
   <artifactId>CSV2GEOJSON</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <build>
-    <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
