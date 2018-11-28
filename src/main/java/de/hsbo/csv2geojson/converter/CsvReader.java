@@ -46,7 +46,6 @@ public class CsvReader {
 
 		for (int k = 0; k < columns.length; k++) {
 			if (relFields.contains(columns[k])) { // test if it is a relevant field - comparison with usedFields
-				System.out.println("ja!");
 				relIndices[k] = true;
 			} else {
 				relIndices[k] = false;
