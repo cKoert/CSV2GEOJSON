@@ -1,0 +1,1636 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [ {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Emirates Stadium ",
+      "Capacity" : "60361",
+      "Team" : "Arsenal ",
+      "City" : "London "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.108611, 51.555 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Villa Park ",
+      "Capacity" : "42785",
+      "Team" : "Aston Villa ",
+      "City" : "Birmingham "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.884722, 52.509167 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Ewood Park ",
+      "Capacity" : "31154",
+      "Team" : "Blackburn Rovers ",
+      "City" : "Blackburn "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.489167, 53.728611 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Reebok Stadium ",
+      "Capacity" : "28100",
+      "Team" : "Bolton Wanderers ",
+      "City" : "Bolton "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.535556, 53.580556 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stamford Bridge ",
+      "Capacity" : "42449",
+      "Team" : "Chelsea ",
+      "City" : "London "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.191111, 51.481667 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Goodison Park ",
+      "Capacity" : "40157",
+      "Team" : "Everton ",
+      "City" : "Liverpool "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.966389, 53.438889 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Craven Cottage ",
+      "Capacity" : "25700",
+      "Team" : "Fulham ",
+      "City" : "London "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.221667, 51.475 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Anfield ",
+      "Capacity" : "45276",
+      "Team" : "Liverpool ",
+      "City" : "Liverpool "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.960828, 53.430819 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Etihad Stadium",
+      "Capacity" : "47405",
+      "Team" : "Manchester City ",
+      "City" : "Manchester "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.200292, 53.482989 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Old Trafford ",
+      "Capacity" : "75811",
+      "Team" : "Manchester United ",
+      "City" : "Stretford "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.291389, 53.463056 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Sports Direct Arena",
+      "Capacity" : "52409",
+      "Team" : "Newcastle United ",
+      "City" : "Newcastle upon Tyne "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.621667, 54.975556 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Carrow Road ",
+      "Capacity" : "27010",
+      "Team" : "Norwich City ",
+      "City" : "Norwich "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 1.308653, 52.622128 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Loftus Road ",
+      "Capacity" : "18439",
+      "Team" : "Queens Park Rangers ",
+      "City" : "London "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.232222, 51.509167 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Britannia Stadium ",
+      "Capacity" : "27740",
+      "Team" : "Stoke City ",
+      "City" : "Stoke-on-Trent "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.175556, 52.988333 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stadium of Light ",
+      "Capacity" : "48707",
+      "Team" : "Sunderland ",
+      "City" : "Sunderland "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.3882, 54.9144 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Liberty Stadium ",
+      "Capacity" : "20520",
+      "Team" : "Swansea City ",
+      "City" : "Swansea "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.9351, 51.6422 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "White Hart Lane ",
+      "Capacity" : "36230",
+      "Team" : "Tottenham Hotspur ",
+      "City" : "London "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.065833, 51.603333 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "The Hawthorns ",
+      "Capacity" : "27877",
+      "Team" : "West Bromwich Albion ",
+      "City" : "West Bromwich "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.963889, 52.509167 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "DW Stadium ",
+      "Capacity" : "25133",
+      "Team" : "Wigan Athletic ",
+      "City" : "Wigan "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.653889, 53.547778 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Molineux Stadium ",
+      "Capacity" : "27828",
+      "Team" : "Wolverhampton Wanderers ",
+      "City" : "Wolverhampton "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.130278, 52.590278 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Oakwell ",
+      "Capacity" : "23009",
+      "Team" : "Barnsley ",
+      "City" : "Barnsley "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.4675, 53.552222 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "St Andrew's Stadium ",
+      "Capacity" : "30079",
+      "Team" : "Birmingham City ",
+      "City" : "Birmingham "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.868189, 52.475703 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Bloomfield Road ",
+      "Capacity" : "16220",
+      "Team" : "Blackpool ",
+      "City" : "Blackpool "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.048056, 53.804722 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "American Express Community Stadium ",
+      "Capacity" : "22374",
+      "Team" : "Brighton & Hove Albion ",
+      "City" : "Brighton "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.083278, 50.861822 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Ashton Gate ",
+      "Capacity" : "21497",
+      "Team" : "Bristol City ",
+      "City" : "Bristol "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.620278, 51.44 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Turf Moor ",
+      "Capacity" : "22546",
+      "Team" : "Burnley ",
+      "City" : "Burnley "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.230278, 53.789167 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Cardiff City Stadium ",
+      "Capacity" : "26828",
+      "Team" : "Cardiff City ",
+      "City" : "Cardiff "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.203056, 51.472778 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Ricoh Arena ",
+      "Capacity" : "32609",
+      "Team" : "Coventry City ",
+      "City" : "Coventry "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.495556, 52.448056 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Selhurst Park ",
+      "Capacity" : "26309",
+      "Team" : "Crystal Palace ",
+      "City" : "London "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.085556, 51.398333 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Pride Park Stadium ",
+      "Capacity" : "33597",
+      "Team" : "Derby County ",
+      "City" : "Derby "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.447222, 52.915 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Keepmoat Stadium ",
+      "Capacity" : "15231",
+      "Team" : "Doncaster Rovers ",
+      "City" : "Doncaster "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.113889, 53.509722 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "KC Stadium ",
+      "Capacity" : "25404",
+      "Team" : "Hull City ",
+      "City" : "Kingston upon Hull "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.367778, 53.746111 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Portman Road ",
+      "Capacity" : "30311",
+      "Team" : "Ipswich Town ",
+      "City" : "Ipswich "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 1.144831, 52.055061 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Elland Road ",
+      "Capacity" : "39460",
+      "Team" : "Leeds United ",
+      "City" : "Leeds "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.572222, 53.777778 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "King Power Stadium ",
+      "Capacity" : "32500",
+      "Team" : "Leicester City ",
+      "City" : "Leicester "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.142222, 52.620278 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Riverside Stadium ",
+      "Capacity" : "34988",
+      "Team" : "Middlesbrough ",
+      "City" : "Middlesbrough "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.216944, 54.578333 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "The Den ",
+      "Capacity" : "20146",
+      "Team" : "Millwall ",
+      "City" : "London "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.05095, 51.485953 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "City Ground ",
+      "Capacity" : "30576",
+      "Team" : "Nottingham Forest ",
+      "City" : "Nottingham "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.132778, 52.94 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "London Road Stadium ",
+      "Capacity" : "15460",
+      "Team" : "Peterborough United ",
+      "City" : "Peterborough "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.240406, 52.564697 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Fratton Park ",
+      "Capacity" : "20224",
+      "Team" : "Portsmouth ",
+      "City" : "Portsmouth "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.063889, 50.796389 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Madejski Stadium ",
+      "Capacity" : "24224",
+      "Team" : "Reading ",
+      "City" : "Reading "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.982778, 51.422222 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "St Mary's Stadium ",
+      "Capacity" : "32689",
+      "Team" : "Southampton ",
+      "City" : "Southampton "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.391111, 50.905833 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Vicarage Road ",
+      "Capacity" : "23500",
+      "Team" : "Watford ",
+      "City" : "Watford "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.401486, 51.649836 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Boleyn Ground ",
+      "Capacity" : "35303",
+      "Team" : "West Ham United ",
+      "City" : "London "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 0.039444, 51.531944 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Almondvale Stadium ",
+      "Capacity" : "10122",
+      "Team" : "Livingston and Gretna ",
+      "City" : "Livingston"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.522872, 55.886167 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Caledonian Stadium ",
+      "Capacity" : "7918",
+      "Team" : "Inverness C.T. ",
+      "City" : "Iverness"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.2175, 57.494722 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Celtic Park ",
+      "Capacity" : "60832",
+      "Team" : "Celtic ",
+      "City" : "Glasgow"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.205589, 55.849711 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Dens Park ",
+      "Capacity" : "12085",
+      "Team" : "Dundee ",
+      "City" : "Dundee"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.973194, 56.475264 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "East End Park ",
+      "Capacity" : "11380",
+      "Team" : "Dunfermline Athletic ",
+      "City" : "Dunfermline"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.441906, 56.075308 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Easter Road ",
+      "Capacity" : "20421",
+      "Team" : "Hibernian ",
+      "City" : "Edinburgh"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.165556, 55.961667 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Falkirk Stadium ",
+      "Capacity" : "9200",
+      "Team" : "Falkirk ",
+      "City" : "Falkirk"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.754269, 56.005136 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Fir Park ",
+      "Capacity" : "13742",
+      "Team" : "Motherwell and Gretna ",
+      "City" : "Motherwell"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.980078, 55.779947 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Firhill Stadium ",
+      "Capacity" : "10887",
+      "Team" : "Partick Thistle ",
+      "City" : "Glasgow"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.269639, 55.881556 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Ibrox Stadium ",
+      "Capacity" : "51082",
+      "Team" : "Rangers ",
+      "City" : "Glasgow"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.309258, 55.853206 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "McDiarmid Park ",
+      "Capacity" : "10673",
+      "Team" : "St. Johnstone ",
+      "City" : "Perth"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.476928, 56.409686 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "New Douglas Park ",
+      "Capacity" : "6078",
+      "Team" : "Hamilton Academical ",
+      "City" : "Hamilton"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.058503, 55.782156 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Pittodrie Stadium ",
+      "Capacity" : "22199",
+      "Team" : "Aberdeen and Inverness C.T. ",
+      "City" : "Aberdeen"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.088889, 57.159167 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Rugby Park ",
+      "Capacity" : "18128",
+      "Team" : "Kilmarnock ",
+      "City" : "Kilmarnock"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.508122, 55.604225 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "St. Mirren Park ",
+      "Capacity" : "8016",
+      "Team" : "St. Mirren ",
+      "City" : "Paisley"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.443889, 55.850556 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Tannadice Park ",
+      "Capacity" : "14209",
+      "Team" : "Dundee United ",
+      "City" : "Dundee"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.968961, 56.474703 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Tynecastle Stadium ",
+      "Capacity" : "17420",
+      "Team" : "Heart of Midlothian ",
+      "City" : "Edinburgh"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.232222, 55.939167 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Victoria Park ",
+      "Capacity" : "6310",
+      "Team" : "Ross County",
+      "City" : "Dingvall"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.418914, 57.595947 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "SGL arena ",
+      "Capacity" : "30660",
+      "Team" : "FC Augsburg ",
+      "City" : "Augsburg "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 10.882222, 48.3225 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "BayArena ",
+      "Capacity" : "30210",
+      "Team" : "Bayer Leverkusen ",
+      "City" : "Leverkusen "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 7.002206, 51.038256 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Allianz Arena ",
+      "Capacity" : "71000",
+      "Team" : "Bayern Munich ",
+      "City" : "Munich "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 11.624753, 48.218775 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Signal Iduna Park ",
+      "Capacity" : "80645",
+      "Team" : "Borussia Dortmund ",
+      "City" : "Dortmund "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 7.451842, 51.492569 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Borussia-Park ",
+      "Capacity" : "54010",
+      "Team" : "Borussia Mönchengladbach ",
+      "City" : "Mönchengladbach "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 6.385464, 51.174583 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Eintracht-Stadion ",
+      "Capacity" : "23325",
+      "Team" : "Eintracht Braunschweig ",
+      "City" : "Braunschweig "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 10.521667, 52.29 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Commerzbank-Arena ",
+      "Capacity" : "51500",
+      "Team" : "Eintracht Frankfurt ",
+      "City" : "Frankfurt "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 8.645458, 50.068572 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "MAGE SOLAR Stadion ",
+      "Capacity" : "24000",
+      "Team" : "SC Freiburg ",
+      "City" : "Freiburg "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 7.893056, 47.988889 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Imtech Arena ",
+      "Capacity" : "57000",
+      "Team" : "Hamburger SV ",
+      "City" : "Hamburg "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 9.898617, 53.587158 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "HDI-Arena ",
+      "Capacity" : "49000",
+      "Team" : "Hannover 96 ",
+      "City" : "Hanover "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 9.731197, 52.360067 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Olympiastadion ",
+      "Capacity" : "74244",
+      "Team" : "Hertha BSC ",
+      "City" : "Berlin "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 13.239444, 52.514722 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Rhein-Neckar Arena ",
+      "Capacity" : "30150",
+      "Team" : "TSG 1899 Hoffenheim ",
+      "City" : "Sinsheim "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 8.888281, 49.239008 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Coface Arena ",
+      "Capacity" : "34000",
+      "Team" : "1. FSV Mainz 05 ",
+      "City" : "Mainz "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 8.224167, 49.984167 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Grundig-Stadion ",
+      "Capacity" : "50000",
+      "Team" : "1. FC Nürnberg ",
+      "City" : "Nuremberg "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 11.125833, 49.426111 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Veltins-Arena ",
+      "Capacity" : "61673",
+      "Team" : "Schalke 04 ",
+      "City" : "Gelsenkirchen "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 7.067589, 51.554503 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Mercedes-Benz Arena ",
+      "Capacity" : "60441",
+      "Team" : "VfB Stuttgart ",
+      "City" : "Stuttgart "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 9.232031, 48.792269 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Weserstadion ",
+      "Capacity" : "42100",
+      "Team" : "Werder Bremen ",
+      "City" : "Bremen "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 8.837628, 53.066394 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Volkswagen Arena ",
+      "Capacity" : "30000",
+      "Team" : "VfL Wolfsburg ",
+      "City" : "Wolfsburg "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 10.803889, 52.431944 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Esprit Arena ",
+      "Capacity" : "54600",
+      "Team" : "Fortuna Düsseldorf ",
+      "City" : "Düsseldorf "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 6.733056, 51.261667 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Trolli Arena ",
+      "Capacity" : "18000",
+      "Team" : "SpVgg Greuther Fürth ",
+      "City" : "Fürth "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 10.999167, 49.486944 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Fritz-Walter-Stadion ",
+      "Capacity" : "49780",
+      "Team" : "1. FC Kaiserslautern ",
+      "City" : "Kaiserslautern "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 7.776667, 49.434722 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "RheinEnergieStadion ",
+      "Capacity" : "50000",
+      "Team" : "1. FC Köln ",
+      "City" : "Cologne "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 6.874997, 50.933497 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Millerntor-Stadion ",
+      "Capacity" : "24487",
+      "Team" : "FC St. Pauli ",
+      "City" : "Hamburg "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 9.967778, 53.554444 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Estadio del Mediterráneo ",
+      "Capacity" : "22000",
+      "Team" : "Almería ",
+      "City" : "Almería "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.435278, 36.84 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "San Mamés ",
+      "Capacity" : "53332",
+      "Team" : "Athletic Bilbao ",
+      "City" : "Bilbao "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -2.950366, 43.264284 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Vicente Calderón ",
+      "Capacity" : "54851",
+      "Team" : "Atlético Madrid ",
+      "City" : "Madrid "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.720606, 40.401719 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Camp Nou ",
+      "Capacity" : "99354",
+      "Team" : "Barcelona ",
+      "City" : "Barcelona "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 2.122802, 41.38087 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Benito Villamarín ",
+      "Capacity" : "52500",
+      "Team" : "Betis ",
+      "City" : "Seville "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -5.981389, 37.356389 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Balaídos ",
+      "Capacity" : "31800",
+      "Team" : "Celta de Vigo ",
+      "City" : "Vigo "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -8.739711, 42.211842 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Martínez Valero ",
+      "Capacity" : "36017",
+      "Team" : "Elche ",
+      "City" : "Elche "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.663333, 38.266944 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Cornellà-El Prat ",
+      "Capacity" : "40500",
+      "Team" : "Espanyol ",
+      "City" : "Cornellà de Llobregat "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 2.075667, 41.347861 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Coliseum Alfonso Pérez ",
+      "Capacity" : "17700",
+      "Team" : "Getafe ",
+      "City" : "Getafe "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.714722, 40.325556 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Nuevo Los Cármenes ",
+      "Capacity" : "22524",
+      "Team" : "Granada ",
+      "City" : "Granada "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.595736, 37.152967 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Ciutat de València ",
+      "Capacity" : "25534",
+      "Team" : "Levante ",
+      "City" : "Valencia "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.364167, 39.494722 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "La Rosaleda ",
+      "Capacity" : "30044",
+      "Team" : "Málaga ",
+      "City" : "Málaga "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.426422, 36.734092 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "El Sadar ",
+      "Capacity" : "19553",
+      "Team" : "Osasuna ",
+      "City" : "Pamplona "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.636944, 42.796667 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Campo de Vallecas ",
+      "Capacity" : "15489",
+      "Team" : "Rayo Vallecano ",
+      "City" : "Madrid "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.658961, 40.391944 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Santiago Bernabéu ",
+      "Capacity" : "85454",
+      "Team" : "Real Madrid ",
+      "City" : "Madrid "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.68835, 40.45306 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Anoeta ",
+      "Capacity" : "32076",
+      "Team" : "Real Sociedad ",
+      "City" : "San Sebastián "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.973617, 43.301378 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Ramón Sánchez Pizjuán ",
+      "Capacity" : "45500",
+      "Team" : "Sevilla ",
+      "City" : "Seville "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -5.9705, 37.384 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Mestalla ",
+      "Capacity" : "55000",
+      "Team" : "Valencia ",
+      "City" : "Valencia "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.358361, 39.474656 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Nuevo José Zorrilla ",
+      "Capacity" : "26512",
+      "Team" : "Valladolid ",
+      "City" : "Valladolid "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.761111, 41.644444 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "El Madrigal ",
+      "Capacity" : "24890",
+      "Team" : "Villarreal ",
+      "City" : "Villarreal "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.103611, 39.944167 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Riazor ",
+      "Capacity" : "34600",
+      "Team" : "Deportivo La Coruña ",
+      "City" : "A Coruña "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -8.417516, 43.368714 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Iberostar Stadium ",
+      "Capacity" : "23142",
+      "Team" : "Mallorca ",
+      "City" : "Palma "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 2.63, 39.59 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "La Romareda ",
+      "Capacity" : "34596",
+      "Team" : "Zaragoza ",
+      "City" : "Zaragoza "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.901822, 41.636592 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade François Coty ",
+      "Capacity" : "10660",
+      "Team" : "Ajaccio ",
+      "City" : "Ajaccio "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 8.776725, 41.931081 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Armand Cesari ",
+      "Capacity" : "16480",
+      "Team" : "Bastia ",
+      "City" : "Bastia "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 9.442619, 42.6514 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Chaban-Delmas ",
+      "Capacity" : "34462",
+      "Team" : "Bordeaux ",
+      "City" : "Bordeaux "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.597778, 44.829167 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Parc des Sports ",
+      "Capacity" : "15660",
+      "Team" : "Évian ",
+      "City" : "Annecy "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 6.118054, 45.916497 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade du Roudourou ",
+      "Capacity" : "18126",
+      "Team" : "Guingamp ",
+      "City" : "Guingamp "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.164599, 48.566285 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Pierre-Mauroy ",
+      "Capacity" : "50186",
+      "Team" : "Lille ",
+      "City" : "Villeneuve-d'Ascq "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 3.130428, 50.611883 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade du Moustoir ",
+      "Capacity" : "18890",
+      "Team" : "Lorient ",
+      "City" : "Lorient "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.369367, 47.748747 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade de Gerland ",
+      "Capacity" : "41842",
+      "Team" : "Lyon ",
+      "City" : "Lyon "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 4.832222, 45.723889 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Velodrome",
+      "Capacity" : "48000",
+      "Team" : "Marseille ",
+      "City" : "Marseille "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 5.395833, 43.269722 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Louis II ",
+      "Capacity" : "18500",
+      "Team" : "AS Monaco ",
+      "City" : "Monaco "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 7.415614, 43.727606 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade de la Mosson ",
+      "Capacity" : "32939",
+      "Team" : "Montpellier ",
+      "City" : "Montpellier "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 3.811944, 43.622222 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade de la Beaujoire ",
+      "Capacity" : "38285",
+      "Team" : "Nantes ",
+      "City" : "Nantes "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.525375, 47.255631 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Allianz Riviera ",
+      "Capacity" : "35624",
+      "Team" : "Nice ",
+      "City" : "Nice "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 7.258756, 43.723328 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Parc des Princes ",
+      "Capacity" : "48712",
+      "Team" : "Paris Saint-Germain ",
+      "City" : "Paris "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 2.253056, 48.841389 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Auguste-Delaune II ",
+      "Capacity" : "21684",
+      "Team" : "Reims ",
+      "City" : "Reims "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 4.025, 49.246667 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade de la Route de Lorient ",
+      "Capacity" : "31127",
+      "Team" : "Rennes ",
+      "City" : "Rennes "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -1.712839, 48.107458 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Geoffroy-Guichard",
+      "Capacity" : "26747",
+      "Team" : "Saint-Étienne ",
+      "City" : "Saint-Étienne "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 4.390278, 45.460833 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Auguste Bonal ",
+      "Capacity" : "20005",
+      "Team" : "Sochaux ",
+      "City" : "Montbéliard "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 6.8112, 47.512417 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stadium Municipal",
+      "Capacity" : "35470",
+      "Team" : "Toulouse ",
+      "City" : "Toulouse "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 1.434167, 43.583056 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade du Hainaut ",
+      "Capacity" : "25172",
+      "Team" : "Valenciennes ",
+      "City" : "Valenciennes "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 3.533027, 50.348131 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Marcel Picot ",
+      "Capacity" : "20085",
+      "Team" : "Nancy",
+      "City" : "Tomblaine "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 6.210687, 48.6955 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Gaston Gérard ",
+      "Capacity" : "15998",
+      "Team" : "Dijon",
+      "City" : "Dijon"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 5.068342, 47.324383 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade de l'Aube ",
+      "Capacity" : "21877",
+      "Team" : "Troyes ",
+      "City" : "Troyes"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 4.098458, 48.307561 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade de l'Abbé-Deschamps ",
+      "Capacity" : "24493",
+      "Team" : "Auxerre ",
+      "City" : "Auxerre "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ 3.588664, 47.786753 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Francis-Le Blé ",
+      "Capacity" : "16000",
+      "Team" : "Brest",
+      "City" : "Brest"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -4.461694, 48.402932 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Stade Michel d'Ornano ",
+      "Capacity" : "21500",
+      "Team" : "Caen",
+      "City" : "Caen "
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -0.396767, 49.179461 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "El Molinón",
+      "Capacity" : "30000",
+      "Team" : "Sporting de Gijón",
+      "City" : "Gijón"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -5.637222, 43.536111 ]
+    }
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "Stadium" : "Campos de Sport de El Sardinero",
+      "Capacity" : "22222",
+      "Team" : "Racing de Santander",
+      "City" : "Santander"
+    },
+    "geometry" : {
+      "type" : "Point",
+      "coordinates" : [ -3.793333, 43.476389 ]
+    }
+  } ]
+}

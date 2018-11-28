@@ -22,9 +22,9 @@ public class Application{
 		HtmlReader html = new HtmlReader(prop.getPropUrl());
 		
 		InputStream htmlInput = html.readWebsite();
-		CsvReader csv = new CsvReader(htmlInput, prop.getPropSep(), prop.getPropXField(), prop.getPropYField());
+		CsvReader csv = new CsvReader(prop.getPropSep(), prop.getPropXField(), prop.getPropYField());
 		
-		ArrayList<CsvPoint> csvArrayList = csv.readCSV(prop.getRelFields());
+		ArrayList<CsvPoint> csvArrayList = csv.readCSV(htmlInput, prop.getRelFields());
 		GeoJsonConverter geoJson = new GeoJsonConverter(csvArrayList, prop.getPropXField(), prop.getPropYField());
 		
 		String geoJsonString = geoJson.createGEOJSON();

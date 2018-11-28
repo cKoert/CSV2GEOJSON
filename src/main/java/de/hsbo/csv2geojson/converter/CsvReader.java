@@ -18,22 +18,20 @@ import de.hsbo.csv2geojson.geometry.CsvPoint;
 public class CsvReader {
 
 	// attributes
-	InputStream inStream;
 	String propSep;
 	String propXField;
 	String propYField;
 
 	// constructor
-	public CsvReader(InputStream inStream, String propSep, String propXField, String propYField) {
+	public CsvReader(String propSep, String propXField, String propYField) {
 		super();
-		this.inStream = inStream;
 		this.propSep = propSep;
 		this.propXField = propXField;
 		this.propYField = propYField;
 	}
 
 	// Read CSV and return ArrayList
-	public ArrayList<CsvPoint> readCSV(List<String> relFields) throws IOException {
+	public ArrayList<CsvPoint> readCSV(InputStream inStream, List<String> relFields) throws IOException {
 
 		InputStreamReader inStreamR = new InputStreamReader(inStream); // read content
 		BufferedReader buffR = new BufferedReader(inStreamR);
@@ -44,14 +42,24 @@ public class CsvReader {
 
 		line = buffR.readLine();
 		String[] columns = line.split(propSep); // all columns
+		boolean[] relIndices = new boolean[columns.length];
+
+		for (int k = 0; k < columns.length; k++) {
+			if (relFields.contains(columns[k])) { // test if it is a relevant field - comparison with usedFields
+				System.out.println("ja!");
+				relIndices[k] = true;
+			} else {
+				relIndices[k] = false;
+			}
+		}
 
 		while ((line = buffR.readLine()) != null) {
 			HashMap<String, String> pointsAtt = new HashMap<String, String>();
-			String[] featureContent = line.split(propSep, -1);	// -1 last element could be null
+			String[] featureContent = line.split(propSep, -1); // -1 last element could be null
 			CsvPoint point = new CsvPoint();
 
 			for (int i = 0; i < columns.length; i++) {
-				if (relFields.contains(columns[i])) { // test if it is a relevant field - comparison with usedFields
+				if (relIndices[i]) { // test if it is a relevant field - comparison with usedFields
 					pointsAtt.put(columns[i], featureContent[i]);
 				}
 				if (columns[i].equals(this.propXField)) { // compare column with xField from properties
@@ -65,7 +73,7 @@ public class CsvReader {
 			point.setPoints(pointsAtt);
 			pointList.add(point);
 		}
+
 		return pointList;
 	}
-
 }
