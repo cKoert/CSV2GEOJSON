@@ -42,13 +42,11 @@ public class CsvReader {
 
 		line = buffR.readLine();
 		String[] columns = line.split(propSep); // all columns
-		boolean[] relIndices = new boolean[columns.length];
+		List relIndices = new ArrayList();
 
 		for (int k = 0; k < columns.length; k++) {
 			if (relFields.contains(columns[k])) { // test if it is a relevant field - comparison with usedFields
-				relIndices[k] = true;
-			} else {
-				relIndices[k] = false;
+				relIndices.add(k);
 			}
 		}
 
@@ -58,7 +56,7 @@ public class CsvReader {
 			CsvPoint point = new CsvPoint();
 
 			for (int i = 0; i < columns.length; i++) {
-				if (relIndices[i]) { // test if it is a relevant field - comparison with usedFields
+				if(relIndices.contains(i)) { 
 					pointsAtt.put(columns[i], featureContent[i]);
 				}
 				if (columns[i].equals(this.propXField)) { // compare column with xField from properties
