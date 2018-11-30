@@ -42,7 +42,7 @@ public class CsvReader {
 
 		line = buffR.readLine();
 		String[] columns = line.split(propSep); // all columns
-		List relIndices = new ArrayList();
+		List<Integer> relIndices = new ArrayList<Integer>();
 
 		for (int k = 0; k < columns.length; k++) {
 			if (relFields.contains(columns[k])) { // test if it is a relevant field - comparison with usedFields
