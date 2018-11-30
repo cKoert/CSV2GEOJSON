@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -20,19 +20,18 @@ import org.junit.jupiter.api.Test;
 public class CsvReaderTest {
 
     private static CsvReader reader;
-    private InputStream in;
 
-    @BeforeEach
-    void setup() {
-        in = getClass().getResourceAsStream("csv-test");
-        reader = new CsvReader(in, ";", "lat", "lon");
+    @BeforeAll
+    static void setup() {    
+        reader = new CsvReader(";", "lat", "lon");
     }
 
     @DisplayName("Tets reading CSV file with appropriate values")
     @Test
     void testReadAppropriateCsv() throws Exception {
         List relevantFields = Arrays.asList("name", "description");
-        List points = reader.readCSV(relevantFields);
+        InputStream in = getClass().getResourceAsStream("csv-test");
+        List points = reader.readCSV(in, relevantFields);
 
         Assertions.assertEquals(2, points.size());
     }
