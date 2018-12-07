@@ -15,7 +15,7 @@ import de.hsbo.csv2geojson.geometry.CsvPoint;
 public class Application{
 
 	public static void main(String[] args) throws Exception{
-		
+		// long start = System.currentTimeMillis();
 		String path =args[0];
 		PropertiesReader prop = new PropertiesReader();
 		prop.readProperties(path);
@@ -31,8 +31,9 @@ public class Application{
 		
 		GeoJsonFileWriter file = new GeoJsonFileWriter(geoJsonString, prop.getPropTarget());
 		file.createFile();
-		
+		// long end = System.currentTimeMillis();
 		System.out.println("created geojson-file");
+		// System.out.println(end-start);
 		// System.out.println(prop.getPropUrl());
 		//System.out.println(geoJsonString);
 		//System.out.println(prop.getSepFields());
