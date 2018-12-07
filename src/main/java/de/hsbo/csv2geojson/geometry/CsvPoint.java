@@ -7,7 +7,7 @@ public class CsvPoint {
 	private String Longitude;
 	private String Latitude;
 
-	HashMap<String, String> points = new HashMap<String, String>();
+	HashMap<String, String> attributes = new HashMap<String, String>();
 
 	public CsvPoint() {		// standard constructor
 	}
@@ -20,11 +20,14 @@ public class CsvPoint {
 		return Latitude;
 	}
 
-	public HashMap<String, String> getPoints() {
-		return points;
+	public HashMap<String, String> getAttributes() {
+		return attributes;
 	}
 
 	public void setLongitude(String longitude) {
+		if(longitude.contains(","))
+			longitude.replace(',', '.');
+		
 		Longitude = longitude;
 	}
 
@@ -32,8 +35,8 @@ public class CsvPoint {
 		Latitude = latitude;
 	}
 
-	public void setPoints(HashMap<String, String> points) {
-		this.points = points;
+	public void setAttributes(HashMap<String, String> points) {
+		this.attributes = points;
 	}
 
 }
