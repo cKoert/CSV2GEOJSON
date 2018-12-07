@@ -27,11 +27,12 @@ public class CsvPoint {
 	public void setLongitude(String longitude) {
 		if(longitude.contains(","))
 			longitude.replace(',', '.');
-		
 		Longitude = longitude;
 	}
 
 	public void setLatitude(String latitude) {
+		if(latitude.contains(","))
+			latitude.replace(',', '.');
 		Latitude = latitude;
 	}
 
