@@ -50,7 +50,7 @@ public class GeoJsonConverter {
 			geometry.putPOJO("coordinates", coord);
 
 			// create node
-			ObjectNode properties = mapper.valueToTree(pointList.get(i).getPoints());
+			ObjectNode properties = mapper.valueToTree(pointList.get(i).getAttributes());
 
 			// add properties and geometry to feature node
 			feature.putPOJO("properties", properties);
