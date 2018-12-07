@@ -43,10 +43,18 @@ public class CsvReader {
 		line = buffR.readLine();
 		String[] columns = line.split(propSep); // all columns
 		List<Integer> relIndices = new ArrayList<Integer>();
+		int xField = 0;
+		int yField = 0;
 
 		for (int k = 0; k < columns.length; k++) {
 			if (relFields.contains(columns[k])) { // test if it is a relevant field - comparison with usedFields
 				relIndices.add(k);
+			}
+			if (columns[k].equals(this.propXField)) {
+				xField = k;
+			}
+			if (columns[k].equals(this.propYField)) {
+				yField = k;
 			}
 		}
 
@@ -55,19 +63,13 @@ public class CsvReader {
 			String[] featureContent = line.split(propSep, -1); // -1 last element could be null
 			CsvPoint point = new CsvPoint();
 
-			for (int i = 0; i < columns.length; i++) {
-				if(relIndices.contains(i)) { 
-					pointsAtt.put(columns[i], featureContent[i]);
-				}
-				if (columns[i].equals(this.propXField)) { // compare column with xField from properties
-					point.setLongitude(featureContent[i]);
-				}
-				if (columns[i].equals(this.propYField)) { // // compare column with yField from properties
-					point.setLatitude(featureContent[i]);
-				}
-
+			for (int i = 0; i < relIndices.size(); i++) {
+					pointsAtt.put(columns[relIndices.get(i)], featureContent[relIndices.get(i)]);
 			}
-			point.setPoints(pointsAtt);
+
+			point.setLongitude(featureContent[xField]);
+			point.setLatitude(featureContent[yField]);
+			point.setAttributes(pointsAtt);
 			pointList.add(point);
 		}
 
