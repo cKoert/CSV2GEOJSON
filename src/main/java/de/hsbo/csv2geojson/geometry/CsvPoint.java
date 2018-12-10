@@ -36,8 +36,8 @@ public class CsvPoint {
 		Latitude = latitude;
 	}
 
-	public void setAttributes(HashMap<String, String> points) {
-		this.attributes = points;
+	public void setAttributes(HashMap<String, String> attributes) {
+		this.attributes = attributes;
 	}
 
 }
