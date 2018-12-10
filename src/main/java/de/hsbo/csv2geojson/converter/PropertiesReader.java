@@ -8,6 +8,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
+import de.hsbo.csv2geojson.exception.WrongFieldSeparatorException;
+
 /**
  * This class reads the single properties of the properties-file. read the
  * properties file with a BufferedReader use java util class "properties" to
@@ -31,8 +33,9 @@ public class PropertiesReader {
 
 	}
 
-	public void readProperties(String path) throws IOException {
+	public void readProperties(String path) throws IOException, WrongFieldSeparatorException{
 		// read
+		WrongFieldSeparatorException e = new WrongFieldSeparatorException();
 		Properties properties = new Properties();
 		File fileIn = new File(path);
 		BufferedReader reader = new BufferedReader(new FileReader(fileIn));
@@ -43,7 +46,13 @@ public class PropertiesReader {
 		 * assign contents to attributes
 		 */
 		this.propUrl = properties.getProperty("url");
-		this.propSep = properties.getProperty("fieldSep");
+		String separator = properties.getProperty("fieldSep");
+		if(separator.equals(",") || separator.equals(";"))
+			this.propSep = separator;
+		else {
+			throw e;
+		}
+		
 		this.propXField = properties.getProperty("xField");
 		this.propYField = properties.getProperty("yField");
 		this.propTarget = properties.getProperty("target"); /*
