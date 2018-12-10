@@ -18,15 +18,12 @@ public class GeoJsonConverter {
 
 	// attributes
 	ArrayList<CsvPoint> pointList;
-	String xField;
-	String yField;
+
 
 	// constructor
-	public GeoJsonConverter(ArrayList<CsvPoint> pointList, String xField, String yField) {
+	public GeoJsonConverter(ArrayList<CsvPoint> pointList) {
 		super();
 		this.pointList = pointList;
-		this.xField = xField;
-		this.yField = yField;
 	}
 
 	// convert

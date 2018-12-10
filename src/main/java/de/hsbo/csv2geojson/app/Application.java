@@ -25,7 +25,7 @@ public class Application{
 		CsvReader csv = new CsvReader(prop.getPropSep(), prop.getPropXField(), prop.getPropYField());
 		
 		ArrayList<CsvPoint> csvArrayList = csv.readCSV(htmlInput, prop.getRelFields());
-		GeoJsonConverter geoJson = new GeoJsonConverter(csvArrayList, prop.getPropXField(), prop.getPropYField());
+		GeoJsonConverter geoJson = new GeoJsonConverter(csvArrayList);
 		
 		String geoJsonString = geoJson.createGEOJSON();
 		
