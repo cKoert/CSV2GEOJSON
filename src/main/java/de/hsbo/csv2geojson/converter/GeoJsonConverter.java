@@ -17,7 +17,7 @@ import de.hsbo.csv2geojson.geometry.CsvPoint;
 public class GeoJsonConverter {
 
 	// attributes
-	ArrayList<CsvPoint> pointList;
+	private ArrayList<CsvPoint> pointList;
 
 
 	// constructor
