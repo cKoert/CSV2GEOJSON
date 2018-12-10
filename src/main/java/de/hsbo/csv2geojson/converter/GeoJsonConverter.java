@@ -20,6 +20,7 @@ public class GeoJsonConverter {
 	private ArrayList<CsvPoint> pointList;
 
 
+
 	// constructor
 	public GeoJsonConverter(ArrayList<CsvPoint> pointList) {
 		super();
@@ -61,4 +62,13 @@ public class GeoJsonConverter {
 
 	}
 
+
+	// Get and Set methods
+	public ArrayList<CsvPoint> getPointList() {
+		return pointList;
+	}
+
+	public void setPointList(ArrayList<CsvPoint> pointList) {
+		this.pointList = pointList;
+	}
 }
