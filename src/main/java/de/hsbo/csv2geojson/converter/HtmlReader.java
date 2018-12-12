@@ -31,7 +31,6 @@ public class HtmlReader {
 			CloseableHttpClient httpclient = HttpClients.createDefault();
 			HttpGet httpGet = new HttpGet(propUrl);
 			CloseableHttpResponse response = httpclient.execute(httpGet);
-
 			HttpEntity entity = response.getEntity(); // fill http-Object (status, parameters, content)
 			InputStream httpcontent = entity.getContent(); // ask for content
 			return httpcontent;

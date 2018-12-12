@@ -35,7 +35,6 @@ public class PropertiesReader {
 
 	public void readProperties(String path) throws IOException, WrongFieldSeparatorException{
 		// read
-		WrongFieldSeparatorException e = new WrongFieldSeparatorException();
 		Properties properties = new Properties();
 		File fileIn = new File(path);
 		BufferedReader reader = new BufferedReader(new FileReader(fileIn));
@@ -50,7 +49,7 @@ public class PropertiesReader {
 		if(separator.equals(",") || separator.equals(";"))
 			this.propSep = separator;
 		else {
-			throw e;
+			throw new WrongFieldSeparatorException("Wrong field separator. Only ',' and ';' are allowed.");
 		}
 		
 		this.propXField = properties.getProperty("xField");

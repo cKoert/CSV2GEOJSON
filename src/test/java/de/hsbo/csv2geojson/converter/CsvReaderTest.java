@@ -72,9 +72,7 @@ public class CsvReaderTest {
 		List relevantFields = Arrays.asList("name", "description");
 		InputStream in = getClass().getResourceAsStream("csv-test-exception");
 		// List<CsvReader> points = reader.readCSV(in, relevantFields);
-		RuntimeException e = new RuntimeException();							// ArraysOutOfBoundsException
-
-		Assertions.assertThrows(e.getClass(), () -> {
+		Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
 			reader.readCSV(in, relevantFields);
 		});
 	}
