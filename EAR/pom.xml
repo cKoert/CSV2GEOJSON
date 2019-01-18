@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>CSV2GEOJSON</groupId>
+    <artifactId>CSV2GEOJSON</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>EAR</artifactId>
+  <packaging>ear</packaging>
+  <dependencies>
+  	<dependency>
+  		<groupId>CSV2GEOJSON</groupId>
+  		<artifactId>Core</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>CSV2GEOJSON</groupId>
+  		<artifactId>WebApp</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  		<type>war</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>CSV2GEOJSON</groupId>
+  		<artifactId>ConsoleApp</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+</project>
